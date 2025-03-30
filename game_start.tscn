@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=4 uid="uid://bgx43t6gtn2hd"]
+[gd_scene load_steps=3 format=4 uid="uid://bgx43t6gtn2hd"]
 
 [ext_resource type="TileSet" uid="uid://cifl3nes63glb" path="res://new_tile_set.tres" id="1_v5ir4"]
+[ext_resource type="PackedScene" uid="uid://b34cymfj2uuwt" path="res://Player.tscn" id="2_jfy66"]
 
 [node name="GameStart" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [102.0]
@@ -26,3 +27,5 @@ tile_set = ExtResource("1_v5ir4")
 [node name="TileMapLayer" type="TileMapLayer" parent="Node2D/TileMapLayer/TileMapLayer"]
 tile_map_data = PackedByteArray("AAADAPv/AgAQAAwAAAADAPz/AgAQAA0AAAAEAPv/AgARAAwAAAAEAPz/AgARAA0AAAAYAAQAAgAQAAEAAAAYAAUAAgAQAAIAAAAYAAYAAgAQAAMAAAAYAAcAAgAQAAkAAAAZAAQAAgARAAEAAAAZAAUAAgARAAIAAAAZAAYAAgARAAMAAAAZAAcAAgARAAkAAAAbAAQAAAAKAAsAAAAbAAUAAgAQAAcAAAAbAAYAAgAQAAgAAAAbAAcAAgAQAAkAAAAcAAQAAAALAAsAAAAcAAUAAgARAAcAAAAcAAYAAgARAAgAAAAcAAcAAgARAAkAAAAaAAMAAAAKAAoAAAAaAAQAAAAKAAsAAAAbAAMAAAAKAAoAAAAcAAMAAAALAAoAAADo/xsABAAEABMAAADo/xwABAAEABMAAADy/wkAAgAUABAAAADy/woAAgAUABEAAADz/wkAAgAVABAAAADz/woAAgAVABEAAAA=")
 tile_set = ExtResource("1_v5ir4")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_jfy66")]
