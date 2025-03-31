@@ -231,7 +231,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_m4oas")
 }],
-"loop": true,
+"loop": false,
 "name": &"Attack_2",
 "speed": 5.0
 }, {
@@ -260,7 +260,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nmkbm")
 }],
-"loop": true,
+"loop": false,
 "name": &"Attack_3",
 "speed": 5.0
 }, {
@@ -353,7 +353,7 @@ script = ExtResource("1_fbb42")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8orog")
-animation = &"Attack"
+animation = &"Attack_3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
