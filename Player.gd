@@ -34,6 +34,12 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("attack") and not is_attacking:
 		is_attacking = true
 		anim_sprite.play("Attack")
+	if Input.is_action_just_pressed("attack_2") and not is_attacking:
+		is_attacking = true
+		anim_sprite.play("Attack_2")
+	if Input.is_action_just_pressed("attack_3") and not is_attacking:
+		is_attacking = true
+		anim_sprite.play("Attack_3")
 	
 	# Continue physics processing regardless of attack state.
 	move_and_slide()
@@ -49,6 +55,10 @@ func _physics_process(delta: float) -> void:
 # This callback resets the attack state when the attack animation finishes.
 func _on_AnimatedSprite2D_animation_finished():
 	if is_attacking and anim_sprite.animation == "Attack":
+		is_attacking = false
+	if is_attacking and anim_sprite.animation == "Attack_2":
+		is_attacking = false
+	if is_attacking and anim_sprite.animation == "Attack_3":
 		is_attacking = false
 
 # This function is called when the player collects a gem.
