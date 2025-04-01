@@ -1,6 +1,7 @@
-[gd_scene load_steps=58 format=3 uid="uid://dxdhvbkleq337"]
+[gd_scene load_steps=59 format=3 uid="uid://dxdhvbkleq337"]
 
 [ext_resource type="Texture2D" uid="uid://dqpmmdxsusqx8" path="res://Angel_Guardian_Creativekind/Angel-Sheet.png" id="1_1fhsx"]
+[ext_resource type="Script" path="res://azrael.gd" id="1_oyuro"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kf43p"]
 atlas = ExtResource("1_1fhsx")
@@ -281,7 +282,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jes7t")
 }],
-"loop": true,
+"loop": false,
 "name": &"Appear",
 "speed": 5.0
 }, {
@@ -346,8 +347,8 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8e3kr")
 }],
-"loop": true,
-"name": &"Dissapear",
+"loop": false,
+"name": &"Disappear",
 "speed": 5.0
 }, {
 "frames": [{
@@ -393,7 +394,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8l10h")
 }],
-"loop": true,
+"loop": false,
 "name": &"Idle",
 "speed": 5.0
 }]
@@ -403,11 +404,12 @@ radius = 79.0
 height = 522.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_oyuro")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_q71vt")
-animation = &"Dissapear"
+animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_b008k")

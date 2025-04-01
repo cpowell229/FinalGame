@@ -1,8 +1,7 @@
 extends Area2D
-
+signal pillar_activated
 @onready var prompt_label = $Label
 var player_in_range = false
-signal pillar_activated
 
 func _ready():
 	connect("body_entered", Callable(self, "_on_body_entered"))
@@ -29,13 +28,12 @@ func _process(delta):
 
 func activate_pillar():
 	print("Spawning active pillar and removing inactive pillar (", self.name, ")")
-	var active_pillar_scene = preload("res://pillar_1_active.tscn")
+	var active_pillar_scene = preload("res://pillar_2_active.tscn")
 	var active_pillar = active_pillar_scene.instantiate()
 
 	active_pillar.global_position = global_position
-	
 	get_parent().add_child(active_pillar)
 
 	print("New pillar added:", active_pillar.name, "– queue_free on", self.name)
-	emit_signal("pillar_activated") 
+	emit_signal("pillar_activated")
 	queue_free()  # Should remove this *inactive* pillar

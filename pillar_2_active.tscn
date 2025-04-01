@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnofbd8hgdyvh"]
+
+[ext_resource type="Texture2D" uid="uid://m5vjn0w243hh" path="res://Art/Pixel Art Top Down/Pillar2_active.png" id="1_73bla"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cf4bq"]
+radius = 14.75
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jsw5f"]
+radius = 50.0
+height = 234.0
+
+[node name="Pillar2" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 57)
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_cf4bq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4, -18)
+scale = Vector2(4, 4)
+texture = ExtResource("1_73bla")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-4, -18)
+shape = SubResource("CapsuleShape2D_jsw5f")

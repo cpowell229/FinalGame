@@ -11,6 +11,7 @@ radius = 13.0
 height = 72.0
 
 [node name="Pillar" type="Area2D"]
+scale = Vector2(4, 4)
 script = ExtResource("1_4saeo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -19,8 +20,11 @@ scale = Vector2(3, 1)
 shape = SubResource("CircleShape2D_rjm4u")
 
 [node name="Label" type="Label" parent="."]
-offset_right = 63.0
-offset_bottom = 23.0
+offset_left = 19.25
+offset_top = 8.75
+offset_right = 82.25
+offset_bottom = 31.75
+scale = Vector2(0.25, 0.25)
 text = "Activate"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

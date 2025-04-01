@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://cci6s4y6op1ob"]
+
+[ext_resource type="Script" path="res://pillar_2_inactive.gd" id="1_jhslo"]
+[ext_resource type="Texture2D" uid="uid://dqrx813ccfnsw" path="res://Art/Pixel Art Top Down/Pillar2.png" id="1_p1wu1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3q3pu"]
+radius = 15.0187
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wua0h"]
+radius = 48.0
+height = 238.0
+
+[node name="Pillar2" type="Area2D"]
+script = ExtResource("1_jhslo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 59)
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_3q3pu")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 69.0
+offset_top = 27.0
+offset_right = 132.0
+offset_bottom = 50.0
+text = "Activate"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, -10)
+scale = Vector2(4, 4)
+texture = ExtResource("1_p1wu1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CapsuleShape2D_wua0h")

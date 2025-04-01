@@ -10,6 +10,7 @@ radius = 14.0
 height = 70.0
 
 [node name="Pillar" type="Area2D"]
+scale = Vector2(4, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 27)
