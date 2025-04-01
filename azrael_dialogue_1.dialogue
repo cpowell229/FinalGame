@@ -1,10 +1,10 @@
 ~ start
-Azrael: [[Hi|Hello|Howdy]], this is some dialogue.
-You: Here are some choices.
-- First one
-	Azrael: You picked the first one.
-- Second one
-	Azrael: You picked the second one.
+Azrael: Who dares disturb my eternal slumber? Ah, a mortal... It has been centuries since I have encountered a mortal. 
+Azrael: How did you find this place, and how have you not evaporated in my precense?
+- I do not know.
+	Azrael: Ah, mortals as clueless as ever. You may not know how you found this place, but the fates never make mistakes. The fact that you are still alive, well that is a mystery, one that we will uncover with time. Your blood has been tainted, you possess demon blood, something only few mortals have been able to endure.
+- I woke up here, what is this place?
+	Azrael: Clever, are you? You waking up here was determined by the fates centuries ago, it is not a mistake that you know stand before me. I have been sealed away in this crypt for over 5000 years. You have released me from my chains, and you did not die in the process. This can only mean one thing, you possess demon blood, something only few mortals have been able to endure.
 - Start again => start
 - End the conversation => END
 Azrael: For more information see the online documentation.
