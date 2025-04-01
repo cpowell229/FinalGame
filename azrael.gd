@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends Node2D
 
 func _ready():
 	# Start playing "Appear" immediately

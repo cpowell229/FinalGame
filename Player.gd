@@ -56,4 +56,7 @@ func add_to_inventory(item):
 	inventory.append(item)
 	print("Picked up: ", item)
 	
-	
+func _unhandled_input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		DialogueManager.show_example_dialogue_balloon(load("res://azrael_dialogue_1.dialogue"), "start")
+		return	

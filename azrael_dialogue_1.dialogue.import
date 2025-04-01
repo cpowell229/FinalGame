@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bh5niuf7aw5an"
+path="res://.godot/imported/azrael_dialogue_1.dialogue-78de5735a9d5e86c52ba173231c0df59.tres"
+
+[deps]
+
+source_file="res://azrael_dialogue_1.dialogue"
+dest_files=["res://.godot/imported/azrael_dialogue_1.dialogue-78de5735a9d5e86c52ba173231c0df59.tres"]
+
+[params]
+
+defaults=true

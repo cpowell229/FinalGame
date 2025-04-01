@@ -394,22 +394,25 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8l10h")
 }],
-"loop": false,
+"loop": true,
 "name": &"Idle",
 "speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b008k"]
-radius = 79.0
-height = 522.0
+radius = 63.0
+height = 416.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="Node2D"]
 script = ExtResource("1_oyuro")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(4, 4)
+scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_q71vt")
 animation = &"Idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, -38)
 shape = SubResource("CapsuleShape2D_b008k")
