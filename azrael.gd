@@ -1,8 +1,11 @@
 extends Node2D
 
 func _ready():
-	# Start playing "Appear" immediately
+	# 1. Play the "Appear" animation immediately
 	$AnimatedSprite2D.play("Appear")
+	
+	# 2. Connect "frame_changed" in code, since it's not exposed in the Editor
+	$AnimatedSprite2D.connect("frame_changed", Callable(self, "_on_AnimatedSprite2D_frame_changed"))
 
 func _on_AnimatedSprite2D_frame_changed():
 	var sprite = $AnimatedSprite2D

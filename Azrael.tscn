@@ -1,7 +1,8 @@
-[gd_scene load_steps=59 format=3 uid="uid://dxdhvbkleq337"]
+[gd_scene load_steps=60 format=3 uid="uid://dxdhvbkleq337"]
 
 [ext_resource type="Texture2D" uid="uid://dqpmmdxsusqx8" path="res://Angel_Guardian_Creativekind/Angel-Sheet.png" id="1_1fhsx"]
 [ext_resource type="Script" path="res://azrael.gd" id="1_oyuro"]
+[ext_resource type="Script" path="res://actionable.gd" id="3_2cshy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kf43p"]
 atlas = ExtResource("1_1fhsx")
@@ -412,6 +413,7 @@ sprite_frames = SubResource("SpriteFrames_q71vt")
 animation = &"Idle"
 
 [node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_2cshy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-1, -38)
