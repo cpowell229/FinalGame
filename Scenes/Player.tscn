@@ -363,7 +363,7 @@ script = ExtResource("1_fbb42")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8orog")
-animation = &"Idle"
+animation = &"Attack_3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.666667, -0.333333)
@@ -382,3 +382,13 @@ script = ExtResource("7_cd8hi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(0.666667, -0.666667)
 shape = SubResource("CapsuleShape2D_ppq88")
+
+[node name="Attack_Cooldown" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="Deal_attack" type="Timer" parent="."]
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="area_exited" from="Hitbox" to="." method="_on_hitbox_area_exited"]
+[connection signal="timeout" from="Attack_Cooldown" to="." method="_on_attack_cooldown_timeout"]
+[connection signal="timeout" from="Deal_attack" to="." method="_on_deal_attack_timeout"]

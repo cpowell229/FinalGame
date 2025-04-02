@@ -1,7 +1,7 @@
-[gd_scene load_steps=50 format=3 uid="uid://28eex0y8a8p5"]
+[gd_scene load_steps=51 format=3 uid="uid://28eex0y8a8p5"]
 
-[ext_resource type="Script" path="res://skelton_enemy.gd" id="1_82gsd"]
 [ext_resource type="Texture2D" uid="uid://cv3jj0r6baupm" path="res://GladiatorSkeleton/Attack1.png" id="1_aawkl"]
+[ext_resource type="Script" path="res://enemy.gd" id="1_qm3gl"]
 [ext_resource type="Texture2D" uid="uid://cm2brfaeq5idv" path="res://GladiatorSkeleton/Attack2.png" id="2_ntdto"]
 [ext_resource type="Texture2D" uid="uid://3djoqjx72ne4" path="res://GladiatorSkeleton/Attack3.png" id="3_1tra8"]
 [ext_resource type="Texture2D" uid="uid://da30qldw1f47y" path="res://GladiatorSkeleton/Death.png" id="4_ggj87"]
@@ -320,8 +320,12 @@ radius = 106.0
 radius = 20.0
 height = 128.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sfttk"]
+radius = 16.0
+height = 112.0
+
 [node name="SkeltonEnemy" type="CharacterBody2D"]
-script = ExtResource("1_82gsd")
+script = ExtResource("1_qm3gl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
@@ -338,5 +342,13 @@ shape = SubResource("CircleShape2D_skmb0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_lf185")
 
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(1, -2)
+shape = SubResource("CapsuleShape2D_sfttk")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="area_exited" from="hitbox" to="." method="_on_hitbox_area_exited"]
