@@ -28,7 +28,7 @@ func _process(delta):
 
 func activate_pillar():
 	print("Spawning active pillar and removing inactive pillar (", self.name, ")")
-	var active_pillar_scene = preload("res://pillar_2_active.tscn")
+	var active_pillar_scene = preload("res://Scenes/pillar_2_active.tscn")
 	var active_pillar = active_pillar_scene.instantiate()
 
 	active_pillar.global_position = global_position

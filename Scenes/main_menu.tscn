@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bc4waomuox64x"]
 
-[ext_resource type="Texture2D" uid="uid://bb0nje5xvcv1y" path="res://Stylized Sky BG (77).png" id="1_neiwm"]
+[ext_resource type="Texture2D" uid="uid://bb0nje5xvcv1y" path="res://Stylized Sky BG (77).png" id="1_fpy75"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -17,7 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_neiwm")
+texture = ExtResource("1_fpy75")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

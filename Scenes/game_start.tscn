@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://Scripts/game_start.gd" id="1_4wv50"]
 [ext_resource type="TileSet" uid="uid://cifl3nes63glb" path="res://new_tile_set.tres" id="1_v5ir4"]
-[ext_resource type="PackedScene" uid="uid://b34cymfj2uuwt" path="res://Scripts/Player.tscn" id="2_jfy66"]
-[ext_resource type="PackedScene" uid="uid://uu70sbqc126g" path="res://Scripts/pillar_1_inactive.tscn" id="4_b0dnf"]
-[ext_resource type="PackedScene" uid="uid://cci6s4y6op1ob" path="res://Scripts/pillar_2_inactive.tscn" id="5_lmmta"]
+[ext_resource type="PackedScene" uid="uid://b34cymfj2uuwt" path="res://Scenes/Player.tscn" id="2_jfy66"]
+[ext_resource type="PackedScene" uid="uid://uu70sbqc126g" path="res://Scenes/pillar_1_inactive.tscn" id="4_b0dnf"]
+[ext_resource type="PackedScene" uid="uid://cci6s4y6op1ob" path="res://Scenes/pillar_2_inactive.tscn" id="5_lmmta"]
 
 [node name="GameStart" type="Node2D"]
 script = ExtResource("1_4wv50")

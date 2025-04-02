@@ -22,12 +22,12 @@ func check_pillars():
 		spawn_floating_pillar()
 
 func spawn_azrael():
-	var azrael_scene = preload("res://Azrael.tscn")
+	var azrael_scene = preload("res://Scenes/Azrael.tscn")
 	var azrael = azrael_scene.instantiate()
 	azrael.position = Vector2(400, 200)
 	add_child(azrael)
 func spawn_floating_pillar():
-	var pillars = preload("res://floating_pillar.tscn")
+	var pillars = preload("res://Scenes/floating_pillar.tscn")
 	var pillar = pillars.instantiate()
 	var pillar2 = pillars.instantiate()
 	pillar.position = Vector2(-613, 174)
