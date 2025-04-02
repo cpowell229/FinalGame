@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="FinalGame"
-run/main_scene="res://main_menu.tscn"
+run/main_scene="res://Scripts/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://Global.gd"
+Global="*res://Scripts/Global.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [editor_plugins]

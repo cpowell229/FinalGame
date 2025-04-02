@@ -1,13 +1,13 @@
 [gd_scene load_steps=54 format=3 uid="uid://b34cymfj2uuwt"]
 
 [ext_resource type="Texture2D" uid="uid://bgrfrg51b7h8t" path="res://Art/Pixel Art Top Down/Texture/Fantasy Warrior/Sprites/Attack1.png" id="1_2puj0"]
-[ext_resource type="Script" path="res://Player.gd" id="1_fbb42"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_fbb42"]
 [ext_resource type="Texture2D" uid="uid://oih7g0ds4bhy" path="res://Art/Pixel Art Top Down/Texture/Fantasy Warrior/Sprites/Attack2.png" id="2_j8jd5"]
 [ext_resource type="Texture2D" uid="uid://83bk71ht537i" path="res://Art/Pixel Art Top Down/Texture/Fantasy Warrior/Sprites/Attack3.png" id="3_qoplj"]
 [ext_resource type="Texture2D" uid="uid://bwl4i8k5lli2e" path="res://Art/Pixel Art Top Down/Texture/Fantasy Warrior/Sprites/Idle.png" id="4_nte8p"]
 [ext_resource type="Texture2D" uid="uid://cspghbi4w8uha" path="res://Art/Pixel Art Top Down/Texture/Fantasy Warrior/Sprites/Jump.png" id="5_tq0p8"]
 [ext_resource type="Texture2D" uid="uid://bypq8ycid5sym" path="res://Art/Pixel Art Top Down/Texture/Fantasy Warrior/Sprites/Run.png" id="6_2rufo"]
-[ext_resource type="Script" path="res://player_input.gd" id="7_cd8hi"]
+[ext_resource type="Script" path="res://Scripts/player_input.gd" id="7_cd8hi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t72pa"]
 atlas = ExtResource("1_2puj0")

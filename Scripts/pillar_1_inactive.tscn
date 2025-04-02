@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://uu70sbqc126g"]
 
-[ext_resource type="Script" path="res://pillar_1_inactive.gd" id="1_4saeo"]
+[ext_resource type="Script" path="res://Scripts/pillar_1_inactive.gd" id="1_4saeo"]
 [ext_resource type="Texture2D" uid="uid://ha3vlwb0vopk" path="res://Art/Pixel Art Top Down/Pillar1.png" id="1_yjrdw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rjm4u"]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=60 format=3 uid="uid://dxdhvbkleq337"]
 
 [ext_resource type="Texture2D" uid="uid://dqpmmdxsusqx8" path="res://Angel_Guardian_Creativekind/Angel-Sheet.png" id="1_1fhsx"]
-[ext_resource type="Script" path="res://azrael.gd" id="1_oyuro"]
-[ext_resource type="Script" path="res://actionable.gd" id="3_2cshy"]
+[ext_resource type="Script" path="res://Scripts/azrael.gd" id="1_oyuro"]
+[ext_resource type="Script" path="res://Scripts/actionable.gd" id="3_2cshy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kf43p"]
 atlas = ExtResource("1_1fhsx")
