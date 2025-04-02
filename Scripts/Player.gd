@@ -13,7 +13,6 @@ var is_attacking: bool = false
 
 func _ready() -> void:
 	add_to_group("player")  # So that coins and the vampire can detect the player
-	# Connect the animation_finished signal using a Callable (Godot 4 syntax).
 	anim_sprite.connect("animation_finished", Callable(self, "_on_AnimatedSprite2D_animation_finished"))
 
 func move(direction):
@@ -42,33 +41,38 @@ func _physics_process(delta: float) -> void:
 	# Continue physics processing regardless of attack state.
 	move_and_slide()
 	
+	# Flip the sprite based on movement direction.
+	if velocity.x < 0:
+		$AnimatedSprite2D.flip_h = true
+	elif velocity.x > 0:
+		$AnimatedSprite2D.flip_h = false
+	
 	# Only update the default animations if not currently attacking.
 	if not is_attacking:
 		# Update animation based on whether we're moving.
 		if velocity.length() > 0:
 			anim_sprite.play("Run")  # Moving animation
 		else:
-			anim_sprite.play("Idle")      # Idle animation
+			anim_sprite.play("Idle")  # Idle animation
 
 # This callback resets the attack state when the attack animation finishes.
 func _on_AnimatedSprite2D_animation_finished():
 	if is_attacking and anim_sprite.animation == "Attack":
 		is_attacking = false
+
 func _on_Hitbox(body):
 	if body.has_method("enemy"):
 		enemy_in_range = true
+
 func _out_of_Hitbox(body):
 	if body.has_method("enemy"):
 		enemy_in_range = false
+
 func enemy_attack():
 	if enemy_in_range:
 		print("player -15 health")
 	
-	
-	
-
 # This function is called when the player collects a gem.
 func add_to_inventory(item):
 	inventory.append(item)
 	print("Picked up: ", item)
-	

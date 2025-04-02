@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://bgx43t6gtn2hd"]
+[gd_scene load_steps=7 format=4 uid="uid://bgx43t6gtn2hd"]
 
 [ext_resource type="Script" path="res://Scripts/game_start.gd" id="1_4wv50"]
 [ext_resource type="TileSet" uid="uid://cifl3nes63glb" path="res://new_tile_set.tres" id="1_v5ir4"]
 [ext_resource type="PackedScene" uid="uid://b34cymfj2uuwt" path="res://Scenes/Player.tscn" id="2_jfy66"]
 [ext_resource type="PackedScene" uid="uid://uu70sbqc126g" path="res://Scenes/pillar_1_inactive.tscn" id="4_b0dnf"]
 [ext_resource type="PackedScene" uid="uid://cci6s4y6op1ob" path="res://Scenes/pillar_2_inactive.tscn" id="5_lmmta"]
+[ext_resource type="PackedScene" uid="uid://28eex0y8a8p5" path="res://skelton_enemy.tscn" id="6_pwovs"]
 
 [node name="GameStart" type="Node2D"]
 script = ExtResource("1_4wv50")
@@ -42,3 +43,6 @@ position = Vector2(2298, 432)
 
 [node name="Pillar2" parent="." instance=ExtResource("5_lmmta")]
 position = Vector2(-362, 1104)
+
+[node name="SkeltonEnemy" parent="." instance=ExtResource("6_pwovs")]
+position = Vector2(596, -238)
