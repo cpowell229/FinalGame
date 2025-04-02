@@ -2,6 +2,10 @@ extends CharacterBody2D
 
 @export var speed: float = 300.0
 @export var inventory: Array = []
+@export var health = 100
+@export var player_alive = true
+@export var enemy_in_range = false
+@export var enemy_attack_cooldown = true
 
 @onready var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -50,6 +54,18 @@ func _physics_process(delta: float) -> void:
 func _on_AnimatedSprite2D_animation_finished():
 	if is_attacking and anim_sprite.animation == "Attack":
 		is_attacking = false
+func _on_Hitbox(body):
+	if body.has_method("enemy"):
+		enemy_in_range = true
+func _out_of_Hitbox(body):
+	if body.has_method("enemy"):
+		enemy_in_range = false
+func enemy_attack():
+	if enemy_in_range:
+		print("player -15 health")
+	
+	
+	
 
 # This function is called when the player collects a gem.
 func add_to_inventory(item):

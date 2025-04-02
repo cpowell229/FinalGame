@@ -20,6 +20,7 @@ func check_pillars():
 	if pillar1_activated and pillar2_activated:
 		spawn_azrael()
 		spawn_floating_pillar()
+		spawn_portal()
 
 func spawn_azrael():
 	var azrael_scene = preload("res://Scenes/Azrael.tscn")
@@ -34,3 +35,9 @@ func spawn_floating_pillar():
 	pillar2.position = Vector2(-679, 881)
 	add_child(pillar)
 	add_child(pillar2)
+func spawn_portal():
+	var portal = preload("res://Scenes/portal.tscn")
+	var portalx = portal.instantiate()
+	portalx.position = Vector2(1813,2)
+	add_child(portalx)
+	
