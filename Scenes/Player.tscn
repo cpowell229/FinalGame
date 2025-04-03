@@ -349,12 +349,12 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hply6"]
-radius = 6.66667
-height = 35.3333
+radius = 43.6667
+height = 88.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ppq88"]
-radius = 7.0
-height = 36.6667
+radius = 45.3333
+height = 91.3333
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(3, 3)
@@ -362,11 +362,12 @@ collision_layer = 3
 script = ExtResource("1_fbb42")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(14, 5)
 sprite_frames = SubResource("SpriteFrames_8orog")
 animation = &"Attack_3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.666667, -0.333333)
+position = Vector2(1.33333, 1.66667)
 shape = SubResource("CapsuleShape2D_hply6")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -378,9 +379,10 @@ position = Vector2(0, -0.666667)
 script = ExtResource("7_cd8hi")
 
 [node name="Hitbox" type="Area2D" parent="."]
+position = Vector2(1, -0.333333)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(0.666667, -0.666667)
+position = Vector2(2, -0.666667)
 shape = SubResource("CapsuleShape2D_ppq88")
 
 [node name="Attack_Cooldown" type="Timer" parent="."]
@@ -390,5 +392,7 @@ wait_time = 3.0
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="area_exited" from="Hitbox" to="." method="_on_hitbox_area_exited"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]
 [connection signal="timeout" from="Attack_Cooldown" to="." method="_on_attack_cooldown_timeout"]
 [connection signal="timeout" from="Deal_attack" to="." method="_on_deal_attack_timeout"]

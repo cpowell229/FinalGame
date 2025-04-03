@@ -257,7 +257,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lm7mq")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death",
 "speed": 5.0
 }, {
@@ -291,7 +291,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yfbh1")
 }],
-"loop": true,
+"loop": false,
 "name": &"Take_hit",
 "speed": 5.0
 }, {
@@ -321,16 +321,16 @@ radius = 20.0
 height = 128.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sfttk"]
-radius = 16.0
-height = 112.0
+radius = 80.0
+height = 162.0
 
-[node name="SkeltonEnemy" type="CharacterBody2D"]
+[node name="skeleton" type="CharacterBody2D"]
 script = ExtResource("1_qm3gl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_cyorp")
-animation = &"Attack_3"
+animation = &"Take_hit"
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
@@ -345,10 +345,16 @@ shape = SubResource("CapsuleShape2D_lf185")
 [node name="hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(1, -2)
+position = Vector2(-1, -13)
 shape = SubResource("CapsuleShape2D_sfttk")
 
+[node name="take_damage_cooldown" type="Timer" parent="."]
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="area_exited" from="hitbox" to="." method="_on_hitbox_area_exited"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_exited" from="hitbox" to="." method="_on_hitbox_body_exited"]
+[connection signal="timeout" from="take_damage_cooldown" to="." method="_on_take_damage_cooldown_timeout"]
