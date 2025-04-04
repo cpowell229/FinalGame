@@ -1,5 +1,5 @@
 extends Node2D
-
+var in_range = false
 func _ready():
 	# 1. Play the "Appear" animation immediately
 	$AnimatedSprite2D.play("Appear")
@@ -24,3 +24,13 @@ func _on_AnimatedSprite2D_frame_changed():
 # Call this after the player's dialogue finishes:
 func disappear_after_dialogue():
 	$AnimatedSprite2D.play("Disappear")
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	pass
+		
+	
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	pass

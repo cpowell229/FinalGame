@@ -1,8 +1,9 @@
-[gd_scene load_steps=60 format=3 uid="uid://dxdhvbkleq337"]
+[gd_scene load_steps=61 format=3 uid="uid://dxdhvbkleq337"]
 
 [ext_resource type="Script" path="res://Scripts/azrael.gd" id="1_qfsh0"]
 [ext_resource type="Texture2D" uid="uid://dqpmmdxsusqx8" path="res://Angel_Guardian_Creativekind/Angel-Sheet.png" id="2_d84xu"]
 [ext_resource type="Script" path="res://Scripts/actionable.gd" id="3_vugom"]
+[ext_resource type="Resource" uid="uid://bh5niuf7aw5an" path="res://azrael_dialogue_1.dialogue" id="4_76m1g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kf43p"]
 atlas = ExtResource("2_d84xu")
@@ -401,8 +402,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b008k"]
-radius = 63.0
-height = 416.0
+radius = 288.0
+height = 588.0
 
 [node name="CharacterBody2D" type="Node2D"]
 script = ExtResource("1_qfsh0")
@@ -414,7 +415,11 @@ animation = &"Idle"
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("3_vugom")
+dialogue_resource = ExtResource("4_76m1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1, -38)
+position = Vector2(0, -40)
 shape = SubResource("CapsuleShape2D_b008k")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

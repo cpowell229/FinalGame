@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed: float = 300.0
+var speed: float = 600.0
 var inventory: Array = []
 var health = 100
 var player_alive = true
@@ -16,6 +16,7 @@ func _ready() -> void:
 	$AnimatedSprite2D.play("Idle")
 
 func move(direction):
+	
 	if direction == null:
 		velocity = Vector2.ZERO
 		return
@@ -56,7 +57,7 @@ func player():
 	pass
 func enemy_attack():
 	if enemy_in_range and enemy_attack_cooldown == true:
-		health -= 15
+		health = health - 15
 		enemy_attack_cooldown = false
 		$Attack_Cooldown.start()
 		print("player -15 health")
@@ -104,8 +105,3 @@ func _on_deal_attack_timeout() -> void:
 func _on_hitbox_body_entered(body: Node2D) -> void:
 	if body.has_method("enemy"):
 		enemy_in_range = true
-
-
-func _on_hitbox_body_exited(body: Node2D) -> void:
-	if body.has_method("enemy"):
-		enemy_in_range = false
