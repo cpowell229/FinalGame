@@ -5,7 +5,14 @@ Azrael: How did you find this place, and how have you not evaporated in my prece
 	Azrael: Ah, mortals as clueless as ever. You may not know how you found this place, but the fates never make mistakes. The fact that you are still alive, well that is a mystery, one that we will uncover with time. Your blood has been tainted, you possess demon blood, something only few mortals have been able to endure.
 - I woke up here, what is this place?
 	Azrael: Clever, are you? You waking up here was determined by the fates centuries ago, it is not a mistake that you know stand before me. I have been sealed away in this crypt for over 5000 years. You have released me from my chains, and you did not die in the process. This can only mean one thing, you possess demon blood, something only few mortals have been able to endure.
-- Start again => start
-- End the conversation => END
-Azrael: For more information see the online documentation.
+=> second
+~ second
+Azrael: It was written that someone with your bloodline would one day awaken me from my slumber. A prophecy whispered among ancient shadows, long before your kind learned to record history.
+- What prophecy, what bloodline are you rambling about? What are you?
+	Azrael: Watch your tongue when you speak to me, I am Azrael, the Harbinger of Shadows, guardian of the boundary between life and death. I am the Archangel of Death and leader of the Angels of Death. Centuries ago, my brother Israfel sought to take my power in the land of the undead. He infected an army of mortal men with his own demonic blood, most men instanly died, but a select few survived and gained immense power. At the great battle, after 10 years of fighting, his army overcame me, and Israfel sealed me away in this crypt. Most of the warriors with tainted blood died that day or their bloodlines have since been eradicated, yet a few remain, and the blood runs deeply through your veins.
+=> third
+~ third
+- Okay... Well you still did not tell me why I woke up here, what is this prophecy you speak of? 
+	Azrael: All will be revealed in time, first I must test your strength, accept this power - my gift to you for releasing me.
+	(A surge of energy pulses through your veins, darkness and power intertwined, awakening within you a strength you've never known.)
 => END

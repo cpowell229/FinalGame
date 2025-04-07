@@ -4,7 +4,8 @@ var pillar1_activated = false
 var pillar2_activated = false
 
 func _ready():
-	# Use Callable(...) for Godot 4
+	var resource = preload("res://game_start.dialogue")
+	DialogueManager.show_example_dialogue_balloon(resource, "Wake_up")
 	$Pillar.connect("pillar_activated", Callable(self, "_on_pillar1_activated"))
 	$Pillar2.connect("pillar_activated", Callable(self, "_on_pillar2_activated"))
 
