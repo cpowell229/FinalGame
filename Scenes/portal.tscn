@@ -1,7 +1,7 @@
 [gd_scene load_steps=38 format=3 uid="uid://d01oa8n221mog"]
 
 [ext_resource type="Texture2D" uid="uid://lpfp712f4le" path="res://Art/Portal/Portal_blue_idle-Sheet.png" id="1_1nh5r"]
-[ext_resource type="Script" path="res://portal.gd" id="1_a4jgb"]
+[ext_resource type="Script" path="res://Scripts/portal.gd" id="1_a4jgb"]
 [ext_resource type="Texture2D" uid="uid://67ereyf0lvtt" path="res://Art/Portal/Portal_blue_opening-Sheet.png" id="2_5sr3s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pp83h"]

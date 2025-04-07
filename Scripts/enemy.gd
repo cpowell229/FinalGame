@@ -13,8 +13,6 @@ func _ready():
 	$AnimatedSprite2D.animation_finished.connect(_on_animated_sprite_2d_animation_finished)
 
 func _physics_process(delta):
-	if is_dying:
-		return  # Don't move or chase if we're dying
 
 	deal_with_attacks()
 	attack()
@@ -26,7 +24,6 @@ func _physics_process(delta):
 		position += (player.position - position).normalized() * speed * delta
 		move_and_collide(Vector2.ZERO)
 		$AnimatedSprite2D.play("Walk")
-
 		if (player.position.x - position.x) < 0:
 			$AnimatedSprite2D.flip_h = true
 		else:
@@ -58,13 +55,13 @@ func deal_with_attacks():
 		$AnimatedSprite2D.play("Take_hit")
 		if health <= 0:
 			health = 0
-			is_dying = true
+			is_dying = true 
 			# Play death anim (don't queue_free yet!)
 			$AnimatedSprite2D.play("Death")
 
 func attack():
 	if in_range and can_attack and not is_dying:
-		can_attack = false  # Start cooldown
+		can_attack = false  
 		$attack_cooldown.start()
 		$AnimatedSprite2D.play("Attack")
 
@@ -84,10 +81,13 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	var current_anim = $AnimatedSprite2D.animation
 	print("Animation finished:", current_anim)
 	if current_anim == "Death":
-		queue_free() 
+		self.queue_free() 
 	elif current_anim == "Attack":
-		if player and player.has_method("take_damage"):
-			player.take_damage(10)
+		# After finishing the attack, return to chasing or idling
+		if player_chase and player:
+			$AnimatedSprite2D.play("Walk")
+		else:
+			$AnimatedSprite2D.play("Idle")
 	elif current_anim == "Take_hit" and not is_dying:
 		if player_chase and player:
 			$AnimatedSprite2D.play("Walk")

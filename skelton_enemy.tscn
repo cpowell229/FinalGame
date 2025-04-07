@@ -1,7 +1,7 @@
 [gd_scene load_steps=51 format=3 uid="uid://28eex0y8a8p5"]
 
 [ext_resource type="Texture2D" uid="uid://cv3jj0r6baupm" path="res://GladiatorSkeleton/Attack1.png" id="1_aawkl"]
-[ext_resource type="Script" path="res://enemy.gd" id="1_qm3gl"]
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_qm3gl"]
 [ext_resource type="Texture2D" uid="uid://cm2brfaeq5idv" path="res://GladiatorSkeleton/Attack2.png" id="2_ntdto"]
 [ext_resource type="Texture2D" uid="uid://3djoqjx72ne4" path="res://GladiatorSkeleton/Attack3.png" id="3_1tra8"]
 [ext_resource type="Texture2D" uid="uid://da30qldw1f47y" path="res://GladiatorSkeleton/Death.png" id="4_ggj87"]
@@ -188,7 +188,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g4hec")
 }],
-"loop": true,
+"loop": false,
 "name": &"Attack",
 "speed": 5.0
 }, {
@@ -217,7 +217,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_u8nqd")
 }],
-"loop": true,
+"loop": false,
 "name": &"Attack_2",
 "speed": 5.0
 }, {
@@ -240,7 +240,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_q2uf6")
 }],
-"loop": true,
+"loop": false,
 "name": &"Attack_3",
 "speed": 5.0
 }, {
@@ -330,7 +330,7 @@ script = ExtResource("1_qm3gl")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_cyorp")
-animation = &"Idle"
+animation = &"Attack_3"
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
@@ -352,6 +352,7 @@ shape = SubResource("CapsuleShape2D_sfttk")
 wait_time = 1.3
 
 [node name="attack_cooldown" type="Timer" parent="."]
+wait_time = 1.1
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

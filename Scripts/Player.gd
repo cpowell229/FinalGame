@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed: float = 600.0
+var speed: float = 300.0
 var inventory: Array = []
 var health = 100
 var player_alive = true
