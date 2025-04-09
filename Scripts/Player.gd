@@ -16,7 +16,6 @@ func _ready() -> void:
 	$AnimatedSprite2D.play("Idle")
 
 func move(direction):
-	
 	if direction == null:
 		velocity = Vector2.ZERO
 		return

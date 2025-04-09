@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=3 uid="uid://cqw7e28wxjoe8"]
+
+[ext_resource type="Script" path="res://underworld_door.gd" id="1_dtmb7"]
+[ext_resource type="Texture2D" uid="uid://csqcsmrweq4ur" path="res://Raven Fantasy - Pixel Art Tileset - The Underworld/RPG Maker MV and MZ/!$UW_EXTRAS2.png" id="1_rf3nc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jof06"]
+atlas = ExtResource("1_rf3nc")
+region = Rect2(0, 288, 192, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kbrl"]
+atlas = ExtResource("1_rf3nc")
+region = Rect2(0, 144, 192, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wes6y"]
+atlas = ExtResource("1_rf3nc")
+region = Rect2(0, 288, 192, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrtbj"]
+atlas = ExtResource("1_rf3nc")
+region = Rect2(192, 288, 192, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6ar2"]
+atlas = ExtResource("1_rf3nc")
+region = Rect2(384, 288, 192, 144)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_47lye"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jof06")
+}],
+"loop": false,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kbrl")
+}],
+"loop": false,
+"name": &"Open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_wes6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrtbj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6ar2")
+}],
+"loop": false,
+"name": &"Opening",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yuscu"]
+size = Vector2(174, 136)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hoy24"]
+radius = 134.015
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_dtmb7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_47lye")
+animation = &"Opening"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_yuscu")
+
+[node name="Interaction_zone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction_zone"]
+position = Vector2(2, 4)
+shape = SubResource("CircleShape2D_hoy24")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Interaction_zone" to="." method="_on_interaction_zone_body_entered"]
+[connection signal="body_exited" from="Interaction_zone" to="." method="_on_interaction_zone_body_exited"]
