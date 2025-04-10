@@ -4,3 +4,4 @@ extends Node
 enum InputDirection { UP, DOWN, LEFT, RIGHT,  }
 var is_attacking = false
 var three_pillars = false
+var can_run = true
