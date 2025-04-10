@@ -1,0 +1,95 @@
+[gd_scene load_steps=13 format=3 uid="uid://cno1jc7wnq7f0"]
+
+[ext_resource type="Script" path="res://underworld_pillar.gd" id="1_k6gne"]
+[ext_resource type="Texture2D" uid="uid://cf38s2hp0o7qb" path="res://Raven Fantasy - Pixel Art Tileset - The Underworld/RPG Maker MV and MZ/!$UW_EXTRAS.png" id="1_v752d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_528pq"]
+atlas = ExtResource("1_v752d")
+region = Rect2(0, 0, 144, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcq61"]
+atlas = ExtResource("1_v752d")
+region = Rect2(144, 0, 144, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lshuy"]
+atlas = ExtResource("1_v752d")
+region = Rect2(288, 0, 144, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0ksu"]
+atlas = ExtResource("1_v752d")
+region = Rect2(0, 150, 144, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwiug"]
+atlas = ExtResource("1_v752d")
+region = Rect2(144, 150, 144, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gve55"]
+atlas = ExtResource("1_v752d")
+region = Rect2(288, 150, 144, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yjojg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_528pq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcq61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lshuy")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0ksu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwiug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gve55")
+}],
+"loop": true,
+"name": &"Lit",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vqpqp"]
+size = Vector2(49, 94.5)
+
+[sub_resource type="Theme" id="Theme_witdw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g30oq"]
+radius = 62.1289
+
+[node name="Underworld_pillar" type="Area2D"]
+script = ExtResource("1_k6gne")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_yjojg")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 21.75)
+shape = SubResource("RectangleShape2D_vqpqp")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 52.0
+offset_top = 41.0
+offset_right = 197.0
+offset_bottom = 64.0
+theme = SubResource("Theme_witdw")
+text = "Press E to activate."
+
+[node name="Activation_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Activation_area"]
+position = Vector2(4, 50)
+shape = SubResource("CircleShape2D_g30oq")
+
+[connection signal="body_entered" from="Activation_area" to="." method="_on_activation_area_body_entered"]
+[connection signal="body_exited" from="Activation_area" to="." method="_on_activation_area_body_exited"]
