@@ -1,0 +1,526 @@
+[gd_scene load_steps=116 format=3 uid="uid://tb6r8ngv1gue"]
+
+[ext_resource type="Texture2D" uid="uid://eyncc0t1cqh8" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Shoot/SkullArcher_shoot_000.png" id="1_7ifm8"]
+[ext_resource type="Script" path="res://underworld_enemy_02.gd" id="1_lk4h5"]
+[ext_resource type="Texture2D" uid="uid://u7v2ujiqiqkn" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Shoot/SkullArcher_shoot_001.png" id="2_s55qa"]
+[ext_resource type="Texture2D" uid="uid://cmfmianuprdku" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Shoot/SkullArcher_shoot_002.png" id="3_fd54c"]
+[ext_resource type="Texture2D" uid="uid://cp5xc2c0ef0ss" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Shoot/SkullArcher_shoot_003.png" id="4_fqphr"]
+[ext_resource type="Texture2D" uid="uid://sragllnrxhk1" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Shoot/SkullArcher_shoot_004.png" id="5_rj1k5"]
+[ext_resource type="Texture2D" uid="uid://canuw1h3c4ape" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Shoot/SkullArcher_shoot_005.png" id="6_pjsck"]
+[ext_resource type="Texture2D" uid="uid://bk7u7yg7bge2u" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Shoot/SkullArcher_shoot_006.png" id="7_bto5a"]
+[ext_resource type="Texture2D" uid="uid://q0ltqrd4krid" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Shoot/SkullArcher_shoot_007.png" id="8_gcgjv"]
+[ext_resource type="Texture2D" uid="uid://br7h2djmhn0ts" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Shoot/SkullArcher_shoot_008.png" id="9_5y55i"]
+[ext_resource type="Texture2D" uid="uid://dtgrkflejm31y" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Shoot/SkullArcher_shoot_009.png" id="10_n3af3"]
+[ext_resource type="Texture2D" uid="uid://b2pcn3r00jlos" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Shoot/SkullArcher_shoot_010.png" id="11_ias2c"]
+[ext_resource type="Texture2D" uid="uid://4n7jbkqik0ng" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Shoot/SkullArcher_shoot_011.png" id="12_0dh42"]
+[ext_resource type="Texture2D" uid="uid://du1gxq7vx16la" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Shoot/SkullArcher_shoot_012.png" id="13_e6mwx"]
+[ext_resource type="Texture2D" uid="uid://brcskq322o7um" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Shoot/SkullArcher_shoot_013.png" id="14_t7g2y"]
+[ext_resource type="Texture2D" uid="uid://builh0h6dnofc" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Shoot/SkullArcher_shoot_014.png" id="15_c0seg"]
+[ext_resource type="Texture2D" uid="uid://b38cyyxbrxftj" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Shoot/SkullArcher_shoot_015.png" id="16_ocx6n"]
+[ext_resource type="Texture2D" uid="uid://bcjo0txfq6s5e" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Idle/SkullArcher_Idle_000.png" id="17_f173h"]
+[ext_resource type="Texture2D" uid="uid://cavq3i227pa07" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Idle/SkullArcher_Idle_001.png" id="18_5lnjr"]
+[ext_resource type="Texture2D" uid="uid://3oi4m3ini2l6" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Idle/SkullArcher_Idle_002.png" id="19_2014a"]
+[ext_resource type="Texture2D" uid="uid://hk4m8ush6gbc" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Idle/SkullArcher_Idle_003.png" id="20_xcgn8"]
+[ext_resource type="Texture2D" uid="uid://cf67rpfir4r36" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Idle/SkullArcher_Idle_004.png" id="21_hixrm"]
+[ext_resource type="Texture2D" uid="uid://uw2u43b513x0" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Idle/SkullArcher_Idle_005.png" id="22_s4lcf"]
+[ext_resource type="Texture2D" uid="uid://kuv18aj1geue" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Idle/SkullArcher_Idle_006.png" id="23_2qrwk"]
+[ext_resource type="Texture2D" uid="uid://d2micmkl3h38q" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Idle/SkullArcher_Idle_007.png" id="24_e44ct"]
+[ext_resource type="Texture2D" uid="uid://xp06ccgr0342" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Walk/SkullArcher_walk_000.png" id="25_8u1hs"]
+[ext_resource type="Texture2D" uid="uid://b6r5nxk2xtswl" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Walk/SkullArcher_walk_001.png" id="26_m5oec"]
+[ext_resource type="Texture2D" uid="uid://cqcnsicqy0ljw" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Walk/SkullArcher_walk_003.png" id="27_2c0nj"]
+[ext_resource type="Texture2D" uid="uid://cr1cmrnro2eg1" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Walk/SkullArcher_walk_004.png" id="28_tk3e1"]
+[ext_resource type="Texture2D" uid="uid://d25vdgyaxb5pu" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Walk/SkullArcher_walk_005.png" id="29_ee7a1"]
+[ext_resource type="Texture2D" uid="uid://dkmlkubk7okwx" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Walk/SkullArcher_walk_006.png" id="30_xya0p"]
+[ext_resource type="Texture2D" uid="uid://cuya1oqlktsfv" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Walk/SkullArcher_walk_007.png" id="31_fubox"]
+[ext_resource type="Texture2D" uid="uid://dgkfov3eqsne3" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Walk/SkullArcher_walk_008.png" id="32_mhwnw"]
+[ext_resource type="Texture2D" uid="uid://3ntffgc3qili" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Walk/SkullArcher_walk_009.png" id="33_7gfvf"]
+[ext_resource type="Texture2D" uid="uid://cm7as6k4b5voj" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Walk/SkullArcher_walk_010.png" id="34_0wn0b"]
+[ext_resource type="Texture2D" uid="uid://ciae06maoek2k" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Walk/SkullArcher_walk_011.png" id="35_188h8"]
+[ext_resource type="Texture2D" uid="uid://b3yj2ljxpnmdf" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Walk/SkullArcher_walk_012.png" id="36_o0l18"]
+[ext_resource type="Texture2D" uid="uid://g4e3xix1sjqx" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Walk/SkullArcher_walk_013.png" id="37_jffhy"]
+[ext_resource type="Texture2D" uid="uid://dyorc2jok36tf" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Walk/SkullArcher_walk_014.png" id="38_lgft1"]
+[ext_resource type="Texture2D" uid="uid://dbqd8uqxmg0g" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Walk/SkullArcher_walk_015.png" id="39_qddpa"]
+[ext_resource type="Texture2D" uid="uid://cdu61g2idi65f" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Die/SkullArcher_Die_000.png" id="40_3dybx"]
+[ext_resource type="Texture2D" uid="uid://cno2ad2sip8v2" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Die/SkullArcher_Die_001.png" id="41_25utg"]
+[ext_resource type="Texture2D" uid="uid://be6xruo8bper5" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Die/SkullArcher_Die_002.png" id="42_2rbna"]
+[ext_resource type="Texture2D" uid="uid://cd5gtrs8ld1u4" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Die/SkullArcher_Die_003.png" id="43_31v2k"]
+[ext_resource type="Texture2D" uid="uid://bbfr8mxrjsakd" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Die/SkullArcher_Die_004.png" id="44_3m4ei"]
+[ext_resource type="Texture2D" uid="uid://c5uai2etafj5o" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Die/SkullArcher_Die_005.png" id="45_t3yqy"]
+[ext_resource type="Texture2D" uid="uid://dhmrmx6uhmn4d" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Die/SkullArcher_Die_006.png" id="46_eensd"]
+[ext_resource type="Texture2D" uid="uid://dk10ls8eex8x7" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Die/SkullArcher_Die_007.png" id="47_lrl2t"]
+[ext_resource type="Texture2D" uid="uid://dso6llkeb5ke0" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Die/SkullArcher_Die_008.png" id="48_eq1w0"]
+[ext_resource type="Texture2D" uid="uid://i84gp0uqlnbk" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Die/SkullArcher_Die_009.png" id="49_jqow5"]
+[ext_resource type="Texture2D" uid="uid://lxspob16tx7w" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Die/SkullArcher_Die_010.png" id="50_nd8ho"]
+[ext_resource type="Texture2D" uid="uid://ls3f3ym8h5sp" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Die/SkullArcher_Die_011.png" id="51_4dc8y"]
+[ext_resource type="Texture2D" uid="uid://bgd84c0vlbsh0" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Die/SkullArcher_Die_012.png" id="52_5nac1"]
+[ext_resource type="Texture2D" uid="uid://cxdf1w3awxt38" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Die/SkullArcher_Die_013.png" id="53_8cwui"]
+[ext_resource type="Texture2D" uid="uid://dn8l3y7d1mapg" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Die/SkullArcher_Die_014.png" id="54_thu3m"]
+[ext_resource type="Texture2D" uid="uid://qhds3q0ptf58" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/SkeletonArcher/Die/SkullArcher_Die_015.png" id="55_okqfa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lotek"]
+atlas = ExtResource("1_7ifm8")
+region = Rect2(0, 0, 611, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elopv"]
+atlas = ExtResource("2_s55qa")
+region = Rect2(0, 0, 611, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sld3v"]
+atlas = ExtResource("3_fd54c")
+region = Rect2(0, 0, 611, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ja4yt"]
+atlas = ExtResource("4_fqphr")
+region = Rect2(0, 0, 611, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_reg2a"]
+atlas = ExtResource("5_rj1k5")
+region = Rect2(0, 0, 611, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkk40"]
+atlas = ExtResource("6_pjsck")
+region = Rect2(0, 0, 611, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_manoo"]
+atlas = ExtResource("7_bto5a")
+region = Rect2(0, 0, 611, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rps7u"]
+atlas = ExtResource("8_gcgjv")
+region = Rect2(0, 0, 611, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wr252"]
+atlas = ExtResource("9_5y55i")
+region = Rect2(0, 0, 611, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aegh1"]
+atlas = ExtResource("10_n3af3")
+region = Rect2(0, 0, 611, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dx2t1"]
+atlas = ExtResource("11_ias2c")
+region = Rect2(0, 0, 611, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uufmc"]
+atlas = ExtResource("12_0dh42")
+region = Rect2(0, 0, 611, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_algkj"]
+atlas = ExtResource("13_e6mwx")
+region = Rect2(0, 0, 611, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6w6o"]
+atlas = ExtResource("14_t7g2y")
+region = Rect2(0, 0, 611, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6rvc"]
+atlas = ExtResource("15_c0seg")
+region = Rect2(0, 0, 611, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpllb"]
+atlas = ExtResource("16_ocx6n")
+region = Rect2(0, 0, 611, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17hgb"]
+atlas = ExtResource("40_3dybx")
+region = Rect2(0, 0, 457, 442)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knnty"]
+atlas = ExtResource("41_25utg")
+region = Rect2(0, 0, 457, 442)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hw7eb"]
+atlas = ExtResource("42_2rbna")
+region = Rect2(0, 0, 457, 442)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddujh"]
+atlas = ExtResource("43_31v2k")
+region = Rect2(0, 0, 457, 442)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcorh"]
+atlas = ExtResource("44_3m4ei")
+region = Rect2(0, 0, 457, 442)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0u57"]
+atlas = ExtResource("45_t3yqy")
+region = Rect2(0, 0, 457, 442)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kf5o6"]
+atlas = ExtResource("46_eensd")
+region = Rect2(0, 0, 457, 442)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvdo3"]
+atlas = ExtResource("47_lrl2t")
+region = Rect2(0, 0, 457, 442)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0o03"]
+atlas = ExtResource("48_eq1w0")
+region = Rect2(0, 0, 457, 442)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cly8s"]
+atlas = ExtResource("49_jqow5")
+region = Rect2(0, 0, 457, 442)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbdru"]
+atlas = ExtResource("50_nd8ho")
+region = Rect2(0, 0, 457, 442)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1mfs"]
+atlas = ExtResource("51_4dc8y")
+region = Rect2(0, 0, 457, 442)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgmlh"]
+atlas = ExtResource("52_5nac1")
+region = Rect2(0, 0, 457, 442)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sht6e"]
+atlas = ExtResource("53_8cwui")
+region = Rect2(0, 0, 457, 442)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47x5e"]
+atlas = ExtResource("54_thu3m")
+region = Rect2(0, 0, 457, 442)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlkam"]
+atlas = ExtResource("55_okqfa")
+region = Rect2(0, 0, 457, 442)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bg1n"]
+atlas = ExtResource("17_f173h")
+region = Rect2(0, 0, 395, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkjia"]
+atlas = ExtResource("18_5lnjr")
+region = Rect2(0, 0, 395, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wy3pp"]
+atlas = ExtResource("19_2014a")
+region = Rect2(0, 0, 395, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0jcp"]
+atlas = ExtResource("20_xcgn8")
+region = Rect2(0, 0, 395, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4gvd"]
+atlas = ExtResource("21_hixrm")
+region = Rect2(0, 0, 395, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08yre"]
+atlas = ExtResource("22_s4lcf")
+region = Rect2(0, 0, 395, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dvcv"]
+atlas = ExtResource("23_2qrwk")
+region = Rect2(0, 0, 395, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfk0t"]
+atlas = ExtResource("24_e44ct")
+region = Rect2(0, 0, 395, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrngc"]
+atlas = ExtResource("25_8u1hs")
+region = Rect2(0, 0, 343, 302)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xsf8"]
+atlas = ExtResource("26_m5oec")
+region = Rect2(0, 0, 343, 302)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbjy6"]
+atlas = ExtResource("27_2c0nj")
+region = Rect2(0, 0, 343, 302)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0hj0"]
+atlas = ExtResource("28_tk3e1")
+region = Rect2(0, 0, 343, 302)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71wgb"]
+atlas = ExtResource("29_ee7a1")
+region = Rect2(0, 0, 343, 302)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7kf0a"]
+atlas = ExtResource("30_xya0p")
+region = Rect2(0, 0, 343, 302)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mo3qu"]
+atlas = ExtResource("31_fubox")
+region = Rect2(0, 0, 343, 302)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ofxq"]
+atlas = ExtResource("32_mhwnw")
+region = Rect2(0, 0, 343, 302)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0u77"]
+atlas = ExtResource("33_7gfvf")
+region = Rect2(0, 0, 343, 302)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6rni"]
+atlas = ExtResource("34_0wn0b")
+region = Rect2(0, 0, 343, 302)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_feyo7"]
+atlas = ExtResource("35_188h8")
+region = Rect2(0, 0, 343, 302)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5ewk"]
+atlas = ExtResource("36_o0l18")
+region = Rect2(0, 0, 343, 302)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpleh"]
+atlas = ExtResource("37_jffhy")
+region = Rect2(0, 0, 343, 302)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8sw7"]
+atlas = ExtResource("38_lgft1")
+region = Rect2(0, 0, 343, 302)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64qv4"]
+atlas = ExtResource("39_qddpa")
+region = Rect2(0, 0, 343, 302)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ftnkm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lotek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elopv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sld3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ja4yt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_reg2a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkk40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_manoo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rps7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wr252")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aegh1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dx2t1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uufmc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_algkj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6w6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6rvc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpllb")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17hgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knnty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hw7eb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddujh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcorh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0u57")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kf5o6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvdo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0o03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cly8s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbdru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1mfs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgmlh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sht6e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47x5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlkam")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bg1n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkjia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wy3pp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0jcp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4gvd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08yre")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dvcv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfk0t")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrngc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xsf8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbjy6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0hj0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71wgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7kf0a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mo3qu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ofxq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0u77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6rni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_feyo7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5ewk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpleh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8sw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64qv4")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ewmv"]
+size = Vector2(28.1162, 202)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oq3tt"]
+radius = 430.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hcsov"]
+radius = 61.0
+height = 198.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_lk4h5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ftnkm")
+animation = &"Death"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-60, 44)
+rotation = 3.14159
+scale = Vector2(-3.09431, -0.767852)
+shape = SubResource("RectangleShape2D_4ewmv")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-61, 50)
+shape = SubResource("CircleShape2D_oq3tt")
+
+[node name="hitbox" type="Area2D" parent="."]
+position = Vector2(143, 11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(-215, 9)
+shape = SubResource("CapsuleShape2D_hcsov")
+
+[node name="take_damage_cooldown" type="Timer" parent="."]
+
+[node name="attack_cooldown" type="Timer" parent="."]
+
+[node name="Heal" type="Timer" parent="."]
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+modulate = Color(0.759366, 0, 0.0508989, 1)
+offset_left = -147.0
+offset_top = 175.0
+offset_right = 24.0
+offset_bottom = 225.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_exited" from="hitbox" to="." method="_on_hitbox_body_exited"]
+[connection signal="timeout" from="take_damage_cooldown" to="." method="_on_take_damage_cooldown_timeout"]
+[connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]
+[connection signal="timeout" from="Heal" to="." method="_on_heal_timeout"]

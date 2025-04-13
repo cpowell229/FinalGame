@@ -1,0 +1,456 @@
+[gd_scene load_steps=106 format=3 uid="uid://boldoqw352hax"]
+
+[ext_resource type="Texture2D" uid="uid://dqelnxlu2kdys" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Hitting/Warrior_Hitting_000.png" id="1_1iteu"]
+[ext_resource type="Texture2D" uid="uid://dwijvo51fnry0" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Hitting/Warrior_Hitting_001.png" id="2_80aan"]
+[ext_resource type="Texture2D" uid="uid://cca6mxdyfti56" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Hitting/Warrior_Hitting_002.png" id="3_doueh"]
+[ext_resource type="Texture2D" uid="uid://dyjxspw01iu0e" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Hitting/Warrior_Hitting_003.png" id="4_3uxnw"]
+[ext_resource type="Texture2D" uid="uid://bhan306mdh6vg" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Hitting/Warrior_Hitting_004.png" id="5_7n1ph"]
+[ext_resource type="Texture2D" uid="uid://cxjkmfimm42rh" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Hitting/Warrior_Hitting_005.png" id="6_bh24x"]
+[ext_resource type="Texture2D" uid="uid://t6kbcsnooml5" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Hitting/Warrior_Hitting_006.png" id="7_v7xv7"]
+[ext_resource type="Texture2D" uid="uid://dvfp8mixvy5od" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Hitting/Warrior_Hitting_007.png" id="8_wgvq7"]
+[ext_resource type="Texture2D" uid="uid://bsyocr224ewdd" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Hitting/Warrior_Hitting_008.png" id="9_odh07"]
+[ext_resource type="Texture2D" uid="uid://bkwx4qg6c4dd1" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Hitting/Warrior_Hitting_009.png" id="10_cvnw8"]
+[ext_resource type="Texture2D" uid="uid://duvcolsss1iyj" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Hitting/Warrior_Hitting_010.png" id="11_2da57"]
+[ext_resource type="Texture2D" uid="uid://b24ivxpj0i71j" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Hitting/Warrior_Hitting_011.png" id="12_c872u"]
+[ext_resource type="Texture2D" uid="uid://dpn7folapxvkc" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Die/Warior_Die_000.png" id="13_6omp6"]
+[ext_resource type="Texture2D" uid="uid://chnihqr0kmtg0" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Die/Warior_Die_001.png" id="14_j8ufx"]
+[ext_resource type="Texture2D" uid="uid://bma66usli1njl" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Die/Warior_Die_002.png" id="15_s7cc2"]
+[ext_resource type="Texture2D" uid="uid://4xopbrwpgyk6" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Die/Warior_Die_003.png" id="16_v70xe"]
+[ext_resource type="Texture2D" uid="uid://bmt0k5xtkkmam" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Die/Warior_Die_004.png" id="17_g5nk2"]
+[ext_resource type="Texture2D" uid="uid://3se3qsavb0ne" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Die/Warior_Die_005.png" id="18_vifv1"]
+[ext_resource type="Texture2D" uid="uid://clsmw645arn7p" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Die/Warior_Die_006.png" id="19_3wx5n"]
+[ext_resource type="Texture2D" uid="uid://cot6fwko0ckew" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Die/Warior_Die_007.png" id="20_ohjiu"]
+[ext_resource type="Texture2D" uid="uid://dos4hnuxk8nqf" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Die/Warior_Die_008.png" id="21_f41y5"]
+[ext_resource type="Texture2D" uid="uid://cenhadygwab44" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Die/Warior_Die_009.png" id="22_0ejp6"]
+[ext_resource type="Texture2D" uid="uid://bfyy8enpgbhrm" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Die/Warior_Die_010.png" id="23_l0gle"]
+[ext_resource type="Texture2D" uid="uid://dklfl0j7yee7y" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Die/Warior_Die_011.png" id="24_vcacy"]
+[ext_resource type="Texture2D" uid="uid://egu8hs2rsbt6" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Die/Warior_Die_012.png" id="25_gl6nt"]
+[ext_resource type="Texture2D" uid="uid://bmurf3cjingy" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Die/Warior_Die_013.png" id="26_hy2rj"]
+[ext_resource type="Texture2D" uid="uid://dbqwgl4yu7f54" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Die/Warior_Die_014.png" id="27_oo3ns"]
+[ext_resource type="Texture2D" uid="uid://d4ebjnb0fple2" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Die/Warior_Die_015.png" id="28_66poq"]
+[ext_resource type="Texture2D" uid="uid://dipcftj5rlju3" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Idle/Wariror_Idle_000.png" id="29_2njcj"]
+[ext_resource type="Texture2D" uid="uid://3i4juc1xmj1q" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Idle/Wariror_Idle_001.png" id="30_j0sls"]
+[ext_resource type="Texture2D" uid="uid://bxq3i44ad8vo2" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Idle/Wariror_Idle_002.png" id="31_eqygv"]
+[ext_resource type="Texture2D" uid="uid://5xse08j5us8o" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Idle/Wariror_Idle_003.png" id="32_2e410"]
+[ext_resource type="Texture2D" uid="uid://b24rrybdhrkri" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Idle/Wariror_Idle_004.png" id="33_378w2"]
+[ext_resource type="Texture2D" uid="uid://ikte7dm87jcr" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Idle/Wariror_Idle_005.png" id="34_5qle2"]
+[ext_resource type="Texture2D" uid="uid://oh5i0vv36058" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Idle/Wariror_Idle_006.png" id="35_ck1ri"]
+[ext_resource type="Texture2D" uid="uid://dj5jc41ucngwi" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Idle/Wariror_Idle_007.png" id="36_a6xj3"]
+[ext_resource type="Texture2D" uid="uid://we046stun0iw" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Walk/Warior_walk_000.png" id="37_21mtj"]
+[ext_resource type="Texture2D" uid="uid://da0lnwa0ic21i" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Walk/Warior_walk_001.png" id="38_2m1me"]
+[ext_resource type="Texture2D" uid="uid://k03s8nba65q5" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Walk/Warior_walk_002.png" id="39_kc24r"]
+[ext_resource type="Texture2D" uid="uid://bjqpwb2f6yt1l" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Walk/Warior_walk_003.png" id="40_skk2j"]
+[ext_resource type="Texture2D" uid="uid://ylmefq62g4c5" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Walk/Warior_walk_004.png" id="41_6egaq"]
+[ext_resource type="Texture2D" uid="uid://boxwkvqjcb2oo" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Walk/Warior_walk_005.png" id="42_78uqw"]
+[ext_resource type="Texture2D" uid="uid://bu4nlbkc0btsg" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Walk/Warior_walk_006.png" id="43_p8rdq"]
+[ext_resource type="Texture2D" uid="uid://c1yedwmo4tsi2" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Walk/Warior_walk_007.png" id="44_58xwi"]
+[ext_resource type="Texture2D" uid="uid://dlc8cdn4n70nj" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Walk/Warior_walk_008.png" id="45_y7ssk"]
+[ext_resource type="Texture2D" uid="uid://bd7yhlryrtqkc" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Walk/Warior_walk_009.png" id="46_yw77i"]
+[ext_resource type="Texture2D" uid="uid://bvyy35i4qnjrt" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Walk/Warior_walk_010.png" id="47_qkouk"]
+[ext_resource type="Texture2D" uid="uid://btdbw7pnc43re" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Walk/Warior_walk_011.png" id="48_qgypm"]
+[ext_resource type="Texture2D" uid="uid://0n22vkhe6ck6" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Walk/Warior_walk_012.png" id="49_0djea"]
+[ext_resource type="Texture2D" uid="uid://brra425fddinv" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Walk/Warior_walk_014.png" id="50_b2he3"]
+[ext_resource type="Texture2D" uid="uid://bgf1k6y1tdpta" path="res://imports/craftpix-891167-6-skull-game-character-sprites-pack/PNG/Wariors/Walk/Warior_walk_015.png" id="51_1khbc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkvi4"]
+atlas = ExtResource("1_1iteu")
+region = Rect2(0, 0, 523, 408)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbwjl"]
+atlas = ExtResource("2_80aan")
+region = Rect2(0, 0, 523, 408)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eci52"]
+atlas = ExtResource("3_doueh")
+region = Rect2(0, 0, 523, 408)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47hng"]
+atlas = ExtResource("4_3uxnw")
+region = Rect2(0, 0, 523, 408)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxmna"]
+atlas = ExtResource("5_7n1ph")
+region = Rect2(0, 0, 523, 408)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uu6pw"]
+atlas = ExtResource("6_bh24x")
+region = Rect2(0, 0, 523, 408)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oj4fg"]
+atlas = ExtResource("7_v7xv7")
+region = Rect2(0, 0, 523, 408)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0aomk"]
+atlas = ExtResource("8_wgvq7")
+region = Rect2(0, 0, 523, 408)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjeqb"]
+atlas = ExtResource("9_odh07")
+region = Rect2(0, 0, 523, 408)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfbqf"]
+atlas = ExtResource("10_cvnw8")
+region = Rect2(0, 0, 523, 408)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4syf"]
+atlas = ExtResource("11_2da57")
+region = Rect2(0, 0, 523, 408)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ph8e"]
+atlas = ExtResource("12_c872u")
+region = Rect2(0, 0, 523, 408)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16nfh"]
+atlas = ExtResource("13_6omp6")
+region = Rect2(0, 0, 586, 447)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wcn6"]
+atlas = ExtResource("14_j8ufx")
+region = Rect2(0, 0, 586, 447)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5hgg"]
+atlas = ExtResource("15_s7cc2")
+region = Rect2(0, 0, 586, 447)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o25wt"]
+atlas = ExtResource("16_v70xe")
+region = Rect2(0, 0, 586, 447)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yae2m"]
+atlas = ExtResource("17_g5nk2")
+region = Rect2(0, 0, 586, 447)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kpqj"]
+atlas = ExtResource("18_vifv1")
+region = Rect2(0, 0, 586, 447)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u08kg"]
+atlas = ExtResource("19_3wx5n")
+region = Rect2(0, 0, 586, 447)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5npe4"]
+atlas = ExtResource("20_ohjiu")
+region = Rect2(0, 0, 586, 447)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6s7t"]
+atlas = ExtResource("21_f41y5")
+region = Rect2(0, 0, 586, 447)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmgdp"]
+atlas = ExtResource("22_0ejp6")
+region = Rect2(0, 0, 586, 447)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15pu2"]
+atlas = ExtResource("23_l0gle")
+region = Rect2(0, 0, 586, 447)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_452s3"]
+atlas = ExtResource("24_vcacy")
+region = Rect2(0, 0, 586, 447)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kshk1"]
+atlas = ExtResource("25_gl6nt")
+region = Rect2(0, 0, 586, 447)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trkqh"]
+atlas = ExtResource("26_hy2rj")
+region = Rect2(0, 0, 586, 447)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27knd"]
+atlas = ExtResource("27_oo3ns")
+region = Rect2(0, 0, 586, 447)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2fwy"]
+atlas = ExtResource("28_66poq")
+region = Rect2(0, 0, 586, 447)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70n1h"]
+atlas = ExtResource("29_2njcj")
+region = Rect2(0, 0, 361, 325)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0pj3m"]
+atlas = ExtResource("30_j0sls")
+region = Rect2(0, 0, 361, 325)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rdge"]
+atlas = ExtResource("31_eqygv")
+region = Rect2(0, 0, 361, 325)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d73pw"]
+atlas = ExtResource("32_2e410")
+region = Rect2(0, 0, 361, 325)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jdqs"]
+atlas = ExtResource("33_378w2")
+region = Rect2(0, 0, 361, 325)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqtu7"]
+atlas = ExtResource("34_5qle2")
+region = Rect2(0, 0, 361, 325)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_capih"]
+atlas = ExtResource("35_ck1ri")
+region = Rect2(0, 0, 361, 325)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2nl7"]
+atlas = ExtResource("36_a6xj3")
+region = Rect2(0, 0, 361, 325)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgg64"]
+atlas = ExtResource("37_21mtj")
+region = Rect2(0, 0, 368, 339)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5e1l"]
+atlas = ExtResource("38_2m1me")
+region = Rect2(0, 0, 368, 339)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_midwf"]
+atlas = ExtResource("39_kc24r")
+region = Rect2(0, 0, 368, 339)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xewt5"]
+atlas = ExtResource("40_skk2j")
+region = Rect2(0, 0, 368, 339)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbac6"]
+atlas = ExtResource("41_6egaq")
+region = Rect2(0, 0, 368, 339)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4br60"]
+atlas = ExtResource("42_78uqw")
+region = Rect2(0, 0, 368, 339)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iw1ng"]
+atlas = ExtResource("43_p8rdq")
+region = Rect2(0, 0, 368, 339)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83w4m"]
+atlas = ExtResource("44_58xwi")
+region = Rect2(0, 0, 368, 339)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8do6"]
+atlas = ExtResource("45_y7ssk")
+region = Rect2(0, 0, 368, 339)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tqkt"]
+atlas = ExtResource("45_y7ssk")
+region = Rect2(0, 0, 368, 339)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3dte"]
+atlas = ExtResource("46_yw77i")
+region = Rect2(0, 0, 368, 339)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mv63c"]
+atlas = ExtResource("47_qkouk")
+region = Rect2(0, 0, 368, 339)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pspy"]
+atlas = ExtResource("48_qgypm")
+region = Rect2(0, 0, 368, 339)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vagtt"]
+atlas = ExtResource("49_0djea")
+region = Rect2(0, 0, 368, 339)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xm4ht"]
+atlas = ExtResource("50_b2he3")
+region = Rect2(0, 0, 368, 339)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2waok"]
+atlas = ExtResource("51_1khbc")
+region = Rect2(0, 0, 368, 339)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vulfx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xkvi4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbwjl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eci52")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47hng")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxmna")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uu6pw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oj4fg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0aomk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjeqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfbqf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4syf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ph8e")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16nfh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6wcn6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5hgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o25wt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yae2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kpqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u08kg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5npe4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6s7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmgdp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15pu2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_452s3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kshk1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trkqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27knd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2fwy")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70n1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0pj3m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rdge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d73pw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jdqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqtu7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_capih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2nl7")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgg64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5e1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_midwf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xewt5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbac6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4br60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iw1ng")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83w4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8do6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tqkt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3dte")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mv63c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pspy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vagtt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xm4ht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2waok")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqlo0"]
+size = Vector2(116.5, 214)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vulfx")
+animation = &"Walk"
+frame_progress = 0.0670169
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(57, 19)
+shape = SubResource("RectangleShape2D_iqlo0")
+
+[node name="attack_cooldown" type="Timer" parent="."]
