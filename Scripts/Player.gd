@@ -43,6 +43,7 @@ func _physics_process(delta):
 	move_and_slide()
 	enemy_attack()
 	attack()
+	update_health()
 	if health <= 0:
 		player_alive = false
 		health = 0
@@ -125,3 +126,19 @@ func _on_hitbox_body_entered(body: Node2D) -> void:
 func _on_hitbox_body_exited(body: Node2D) -> void:
 	if body.has_method("enemy"):
 		enemy_in_range = false
+
+func update_health():
+	var healthBar = $HealthBar
+	healthBar.value = health 
+	if health >= 100:
+		healthBar.visible = false
+	else:
+		healthBar.visible = true
+		
+func _on_heal_timeout() -> void:
+	if health < 100:
+		health = health + 20
+		if health > 100:
+			health = 100
+	if health <= 0:
+		health = 0

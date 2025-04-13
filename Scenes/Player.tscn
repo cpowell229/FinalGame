@@ -411,7 +411,7 @@ script = ExtResource("1_fbb42")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(14, 5)
 sprite_frames = SubResource("SpriteFrames_8orog")
-animation = &"Idle"
+animation = &"Fire_Attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-33.3333, 30.3333)
@@ -420,7 +420,10 @@ shape = SubResource("CapsuleShape2D_hply6")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -1)
 zoom = Vector2(2.5, 2.5)
-position_smoothing_enabled = true
+limit_smoothed = true
+rotation_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(0, -0.666667)
@@ -439,9 +442,22 @@ wait_time = 3.0
 [node name="Deal_attack" type="Timer" parent="."]
 wait_time = 1.12
 
+[node name="HealthBar" type="ProgressBar" parent="."]
+modulate = Color(0.271336, 0.538621, 3.85046e-07, 1)
+offset_left = -61.0
+offset_top = 79.0
+offset_right = 3.0
+offset_bottom = 106.0
+show_percentage = false
+
+[node name="Heal" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="area_exited" from="Hitbox" to="." method="_on_hitbox_area_exited"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]
 [connection signal="timeout" from="Attack_Cooldown" to="." method="_on_attack_cooldown_timeout"]
 [connection signal="timeout" from="Deal_attack" to="." method="_on_deal_attack_timeout"]
+[connection signal="timeout" from="Heal" to="." method="_on_heal_timeout"]

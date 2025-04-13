@@ -8,12 +8,13 @@ var in_range = false
 var can_take_damage = true
 var is_dying = false
 var can_attack = true
+var pushback_force := Vector2.ZERO
 
 func _ready():
 	$AnimatedSprite2D.animation_finished.connect(_on_animated_sprite_2d_animation_finished)
 
 func _physics_process(delta):
-
+	move_and_slide()
 	deal_with_attacks()
 	attack()
 	var current_anim = $AnimatedSprite2D.animation

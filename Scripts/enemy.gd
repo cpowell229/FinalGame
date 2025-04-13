@@ -16,6 +16,7 @@ func _physics_process(delta):
 
 	deal_with_attacks()
 	attack()
+	update_health()
 	var current_anim = $AnimatedSprite2D.animation
 	if current_anim in ["Take_hit", "Death", "Attack"]:
 		return
@@ -97,3 +98,21 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 
 func _on_attack_cooldown_timeout() -> void:
 	can_attack = true
+
+func update_health():
+	var healthBar = $HealthBar
+	healthBar.value = health 
+	if health >= 100:
+		healthBar.visible = false
+	else:
+		healthBar.visible = true
+		
+
+
+func _on_heal_timeout() -> void:
+	if health < 100:
+		health = health + 20
+		if health > 100:
+			health = 100
+	if health <= 0:
+		health = 0
