@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://bebi8318ngdme"]
+
+[ext_resource type="Texture2D" uid="uid://bnnxl7xqyokj0" path="res://Statue_animated.png" id="1_l140m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwqog"]
+atlas = ExtResource("1_l140m")
+region = Rect2(6, 0, 138, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wk2xd"]
+atlas = ExtResource("1_l140m")
+region = Rect2(150, 0, 138, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6iqay"]
+atlas = ExtResource("1_l140m")
+region = Rect2(294, 0, 138, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nchpf"]
+atlas = ExtResource("1_l140m")
+region = Rect2(438, 0, 138, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjpdd"]
+atlas = ExtResource("1_l140m")
+region = Rect2(582, 0, 138, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o00e8"]
+atlas = ExtResource("1_l140m")
+region = Rect2(726, 0, 138, 144)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rjpb2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwqog")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wk2xd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6iqay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nchpf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjpdd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o00e8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b24my"]
+size = Vector2(26, 33)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xluch"]
+radius = 9.0
+height = 108.0
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rjpb2")
+frame_progress = 0.404813
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, 44.5)
+shape = SubResource("RectangleShape2D_b24my")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(6, -7)
+shape = SubResource("CapsuleShape2D_xluch")

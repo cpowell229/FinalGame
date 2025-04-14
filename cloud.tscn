@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://bmp1p7nfmt5ps"]
+
+[ext_resource type="Texture2D" uid="uid://cguoo78j3bwd5" path="res://imports/craftpix-net-477432-flying-islands-pixel-art-top-down-tileset/PNG/Clouds_animated1.png" id="1_ymet0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w521w"]
+atlas = ExtResource("1_ymet0")
+region = Rect2(0, 3, 64, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebrmm"]
+atlas = ExtResource("1_ymet0")
+region = Rect2(64, 3, 64, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8umw"]
+atlas = ExtResource("1_ymet0")
+region = Rect2(128, 3, 64, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgb5p"]
+atlas = ExtResource("1_ymet0")
+region = Rect2(192, 3, 64, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfqms"]
+atlas = ExtResource("1_ymet0")
+region = Rect2(256, 3, 64, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qag0i"]
+atlas = ExtResource("1_ymet0")
+region = Rect2(320, 3, 64, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_utfvm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w521w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebrmm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8umw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgb5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfqms")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qag0i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_25pvv"]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_utfvm")
+frame_progress = 0.369727
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_25pvv")

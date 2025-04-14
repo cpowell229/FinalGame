@@ -20,6 +20,7 @@ func _ready():
 func _process(delta: float) -> void:
 	if valid:
 		spawn()
+		valid = false
 
 func _on_pillar1_activated():
 	kill1 = true
@@ -40,5 +41,5 @@ func check_pillars():
 func spawn():
 	var azrael_scene = preload("res://Scenes/Azrael.tscn")
 	var azrael = azrael_scene.instantiate()
-	azrael.position = Vector2(685, -300)
+	azrael.position = Vector2(700, -200)
 	add_child(azrael)
