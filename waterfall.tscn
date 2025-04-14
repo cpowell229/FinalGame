@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://csnm5yr36gg6b"]
+
+[ext_resource type="Texture2D" uid="uid://ovj53hshls34" path="res://imports/craftpix-net-477432-flying-islands-pixel-art-top-down-tileset/PNG/Waterfalls.png" id="1_aos8l"]
+[ext_resource type="Script" path="res://waterfall.gd" id="1_nopj7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vl61t"]
+atlas = ExtResource("1_aos8l")
+region = Rect2(1, 0, 95, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmodu"]
+atlas = ExtResource("1_aos8l")
+region = Rect2(1, 176, 95, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58pcu"]
+atlas = ExtResource("1_aos8l")
+region = Rect2(1, 528, 95, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mdjy"]
+atlas = ExtResource("1_aos8l")
+region = Rect2(1, 704, 95, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obqfq"]
+atlas = ExtResource("1_aos8l")
+region = Rect2(1, 880, 95, 176)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sae27"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vl61t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmodu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58pcu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mdjy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obqfq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ryhu0"]
+size = Vector2(86, 20)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_nopj7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(24, 0)
+scale = Vector2(2.26316, 1)
+sprite_frames = SubResource("SpriteFrames_sae27")
+frame_progress = 0.721151
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(22, -70)
+shape = SubResource("RectangleShape2D_ryhu0")

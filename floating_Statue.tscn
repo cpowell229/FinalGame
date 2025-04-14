@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://cnl2qmjq3qxoc"]
+[gd_scene load_steps=12 format=3 uid="uid://cnl2qmjq3qxoc"]
 
+[ext_resource type="Script" path="res://floating_statue.gd" id="1_ceo85"]
 [ext_resource type="Texture2D" uid="uid://b8fh65lnkssvi" path="res://imports/Statue_animated2.png" id="1_u70j0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_osbj1"]
@@ -59,10 +60,11 @@ size = Vector2(16.5, 20)
 height = 80.0
 
 [node name="Area2D" type="Area2D"]
+script = ExtResource("1_ceo85")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wduhv")
-frame_progress = 0.584737
+frame_progress = 0.349738
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 17)
