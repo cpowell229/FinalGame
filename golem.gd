@@ -11,9 +11,9 @@ var can_attack = true
 
 func _ready():
 	$AnimatedSprite2D.animation_finished.connect(_on_animated_sprite_2d_animation_finished)
+	$AnimatedSprite2D.play("Front_Idle")
 
 func _physics_process(delta):
-
 	deal_with_attacks()
 	attack()
 	update_health()
@@ -61,7 +61,7 @@ func _on_area_2d_body_exited(body):
 
 func deal_with_attacks():
 	if can_take_damage and in_range and Global.is_attacking and not is_dying:
-		health -= 30
+		health = health - 30
 		print("Enemy took 30 damage, now at", health)
 		can_take_damage = false
 		$take_damage_cooldown.start()
@@ -110,28 +110,7 @@ func _on_hitbox_body_exited(body):
 
 func _on_take_damage_cooldown_timeout() -> void:
 	can_take_damage = true
-
-func update_health():
-	var healthBar = $HealthBar
-	healthBar.value = health 
-	if health >= 100:
-		healthBar.visible = false
-	else:
-		healthBar.visible = true
-		
-
-func _on_heal_timeout() -> void:
-	if health < 100:
-		health = health + 20
-		if health > 100:
-			health = 100
-	if health <= 0:
-		health = 0
-
-
-func _on_attack_cooldown_timeout() -> void:
-	can_attack = true
-
+	
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	var current_anim = $AnimatedSprite2D.animation
@@ -179,3 +158,29 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 				$AnimatedSprite2D.play("Front_Idle")
 			elif player and (player.position.y - position.y) > 0:
 				$AnimatedSprite2D.play("Back_Idle")
+
+func update_health():
+	var healthBar = $HealthBar
+	healthBar.value = health 
+	if health >= 300:
+		healthBar.visible = false
+	else:
+		healthBar.visible = true
+		
+
+
+
+func _on_attack_cooldown_timeout() -> void:
+	can_attack = true
+
+
+
+
+
+func _on_heal_timeout() -> void:
+	if health < 300:
+		health = health + 20
+		if health > 300:
+			health = 100
+	if health <= 0:
+		health = 0
