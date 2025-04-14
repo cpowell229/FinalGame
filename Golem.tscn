@@ -640,7 +640,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_iwj4o")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death_Back",
 "speed": 5.0
 }, {
@@ -669,7 +669,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_aa7gf")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death_Front",
 "speed": 5.0
 }, {
@@ -698,7 +698,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mikx1")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death_Left",
 "speed": 5.0
 }, {
@@ -727,7 +727,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qrof4")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death_Right",
 "speed": 5.0
 }, {
@@ -1049,7 +1049,7 @@ script = ExtResource("1_xhwdr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_lmdiq")
-animation = &"Right_Walk"
+animation = &"Left_Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -5)

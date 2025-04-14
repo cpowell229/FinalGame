@@ -9,6 +9,7 @@ var enemy_in_range = false
 var enemy_attack_cooldown = true
 var running = false
 
+
 @onready var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var attacking: bool = false

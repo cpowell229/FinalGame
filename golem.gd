@@ -8,6 +8,7 @@ var in_range = false
 var can_take_damage = true
 var is_dying = false
 var can_attack = true
+signal dead
 
 func _ready():
 	$AnimatedSprite2D.animation_finished.connect(_on_animated_sprite_2d_animation_finished)
@@ -117,6 +118,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	print("Animation finished:", current_anim)
 	
 	if current_anim in ["Death_Right", "Death_Left", "Death_Front", "Death_Back"]:
+		emit_signal("dead")
 		queue_free()
 	elif current_anim in ["Right_Attack", "Left_Attack", "Back_Attack", "Front_Attack"]:
 		if player_chase and player:

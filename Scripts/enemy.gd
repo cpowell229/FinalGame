@@ -8,7 +8,7 @@ var in_range = false
 var can_take_damage = true
 var is_dying = false
 var can_attack = true
-
+signal dead
 func _ready():
 	$AnimatedSprite2D.animation_finished.connect(_on_animated_sprite_2d_animation_finished)
 
@@ -82,6 +82,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	var current_anim = $AnimatedSprite2D.animation
 	print("Animation finished:", current_anim)
 	if current_anim == "Death":
+		emit_signal("dead")
 		self.queue_free() 
 	elif current_anim == "Attack":
 		# After finishing the attack, return to chasing or idling

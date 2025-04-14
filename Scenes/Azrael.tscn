@@ -406,6 +406,7 @@ radius = 288.0
 height = 588.0
 
 [node name="CharacterBody2D" type="Node2D"]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_qfsh0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
