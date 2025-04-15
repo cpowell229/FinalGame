@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://cy2liqjqrxsgs"]
+[gd_scene load_steps=10 format=4 uid="uid://cy2liqjqrxsgs"]
 
 [ext_resource type="TileSet" uid="uid://cifl3nes63glb" path="res://new_tile_set.tres" id="1_4wx87"]
 [ext_resource type="PackedScene" uid="uid://csnm5yr36gg6b" path="res://waterfall.tscn" id="2_325gn"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://h6leum7ijsk7" path="res://floating_Tree.tscn" id="4_vase3"]
 [ext_resource type="PackedScene" uid="uid://bmp1p7nfmt5ps" path="res://cloud.tscn" id="5_wockq"]
 [ext_resource type="PackedScene" uid="uid://b34cymfj2uuwt" path="res://Scenes/Player.tscn" id="7_6tup3"]
+[ext_resource type="PackedScene" uid="uid://bof3ctieofotc" path="res://character_body_2d.tscn" id="7_bbtca"]
+[ext_resource type="PackedScene" uid="uid://dahc2ej8m6dcf" path="res://goblin.tscn" id="9_d2bso"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -73,6 +75,18 @@ position = Vector2(871, 25)
 [node name="Area2D6" parent="TileMapLayer2" instance=ExtResource("5_wockq")]
 position = Vector2(801, -436)
 
-[node name="CharacterBody2D" parent="TileMapLayer2" instance=ExtResource("7_6tup3")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("7_bbtca")]
+position = Vector2(1362, -353)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("7_6tup3")]
 position = Vector2(1225, -139)
 scale = Vector2(0.35, 0.35)
+
+[node name="Goblin1" parent="." instance=ExtResource("9_d2bso")]
+position = Vector2(1032, -395)
+
+[node name="Goblin2" parent="." instance=ExtResource("9_d2bso")]
+position = Vector2(1145, -1)
+
+[node name="Goblin3" parent="." instance=ExtResource("9_d2bso")]
+position = Vector2(1643, -112)
