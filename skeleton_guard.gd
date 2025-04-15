@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-var speed = 100
+var speed = 15
+
 var player_chase = false
 var player = null
 var health = 300
@@ -8,6 +9,7 @@ var in_range = false
 var can_take_damage = true
 var is_dying = false
 var can_attack = true
+var return_to = false
 signal dead
 
 @export var group_name : String = "marker_group"
@@ -17,6 +19,9 @@ var temp_positions : Array
 var current_position : Marker2D
  
 var direction : Vector2 = Vector2.ZERO
+var is_idling = false
+var idle_animation_list = ["Front_Idle", "Left_Idle", "Right_Idle", "Back_Idle"]
+var idle_animation_index = 0
  
 func _ready():
 	positions = get_tree().get_nodes_in_group(group_name)
@@ -24,7 +29,8 @@ func _ready():
 	_get_next_position()
 
 func _physics_process(delta):
-	# Update attacks, health and so on
+	if is_idling:
+		return
 	deal_with_attacks()
 	attack()
 	update_health()
@@ -209,14 +215,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 				elif (player.position.y - position.y) > 0:
 					$AnimatedSprite2D.play("Back_Walk")
 		else:
-				if player and (player.position.x - position.x) < 0:
-					$AnimatedSprite2D.play("Left_Idle")
-				elif player and (player.position.x - position.x) > 0:
-					$AnimatedSprite2D.play("Right_Idle")
-				elif player and (player.position.y - position.y) < 0:
-					$AnimatedSprite2D.play("Front_Idle")
-				elif player and (player.position.y - position.y) > 0:
-					$AnimatedSprite2D.play("Back_Idle")
+			start_idle_cycle()
 
 	elif current_anim in ["Hurt_Right", "Hurt_Left", "Hurt_Front", "Hurt_Back"] and not is_dying:
 		# After hurt animation, go back to chase or idle
@@ -230,11 +229,30 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 			elif (player.position.y - position.y) > 0:
 				$AnimatedSprite2D.play("Back_Walk")
 		else:
-			if player and (player.position.x - position.x) < 0:
-				$AnimatedSprite2D.play("Left_Idle")
-			elif player and (player.position.x - position.x) > 0:
-				$AnimatedSprite2D.play("Right_Idle")
-			elif player and (player.position.y - position.y) < 0:
-				$AnimatedSprite2D.play("Front_Idle")
-			elif player and (player.position.y - position.y) > 0:
-				$AnimatedSprite2D.play("Back_Idle")
+			start_idle_cycle()
+
+
+func _on_return_to_wander_timeout() -> void:
+	return_to = true
+	$return_to_wander.stop()
+
+
+func start_idle_cycle():
+	is_idling = true
+	idle_animation_index = 0
+	$IdleStop.start()         # IdleTimer's wait time should be set to 3 seconds
+	$IdleCycle.start()    # IdleCycleTimer's wait time should be set to a short interval (e.g., 0.5 seconds)
+	$AnimatedSprite2D.play(idle_animation_list[idle_animation_index])
+func _on_idle_stop_timeout() -> void:
+	if is_idling:
+		$AnimatedSprite2D.play(idle_animation_list[idle_animation_index])
+		idle_animation_index = (idle_animation_index + 1) % idle_animation_list.size()
+
+
+
+func _on_idle_cycle_timeout() -> void:
+	is_idling = false
+	$IdleCycle.stop()
+	idle_animation_index = 0
+	# Resume wandering by selecting the next marker
+	_get_next_position()

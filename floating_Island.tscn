@@ -77,35 +77,35 @@ position = Vector2(871, 25)
 position = Vector2(801, -436)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("7_bbtca")]
-position = Vector2(1335, -334)
+position = Vector2(1323, -341)
 
 [node name="player" parent="." instance=ExtResource("7_6tup3")]
-position = Vector2(1225, -139)
+position = Vector2(1220, -162)
 scale = Vector2(0.35, 0.35)
 
 [node name="Goblin1" parent="." instance=ExtResource("9_d2bso")]
-position = Vector2(1032, -395)
+position = Vector2(1139, 9)
 
 [node name="Goblin2" parent="." instance=ExtResource("9_d2bso")]
-position = Vector2(1145, -1)
+position = Vector2(1484, -141)
 
 [node name="Goblin3" parent="." instance=ExtResource("9_d2bso")]
 position = Vector2(1643, -112)
 
 [node name="Skeleton1" parent="." instance=ExtResource("10_m6ad7")]
-position = Vector2(1410, -329)
+position = Vector2(1235, -225)
 
 [node name="Skeleton2" parent="." instance=ExtResource("10_m6ad7")]
-position = Vector2(1351, -389)
+position = Vector2(1477, -382)
 
 [node name="Skeleton3" parent="." instance=ExtResource("10_m6ad7")]
-position = Vector2(1281, -388)
+position = Vector2(1085, -336)
 
 [node name="Marker2D" type="Marker2D" parent="." groups=["marker_group"]]
-position = Vector2(1277, -161)
+position = Vector2(1420, -391)
 
 [node name="Marker2D3" type="Marker2D" parent="." groups=["marker_group"]]
-position = Vector2(1064, -249)
+position = Vector2(1303, -98)
 
 [node name="Marker2D2" type="Marker2D" parent="." groups=["marker_group"]]
-position = Vector2(1110, -393)
+position = Vector2(1045, -301)
