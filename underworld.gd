@@ -17,6 +17,8 @@ func _ready():
 func _process(delta: float) -> void:
 	if valid:
 		Global.three_pillars = true
+		transition()
+		
 
 func _on_pillar1_activated():
 	pillar1_activated = true
@@ -31,3 +33,18 @@ func _on_pillar3_activated():
 func check_pillars():
 	if pillar1_activated and pillar2_activated and pillar3_activated:
 		valid = true
+
+
+func _on_transition_body_entered(body):
+	if body.has_method("player"):
+		Global.transition_scene = true
+
+
+func _on_transition_body_exited(body):
+	if body.has_method("player"):
+		Global.transition_scene = false
+func transition():
+	if Global.transition_scene:
+		if Global.current_scene == "underworld":
+			get_tree().change_scene_to_file("res://underworld_2.tscn")
+			Global.finish_transition()

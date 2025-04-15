@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://cqw7e28wxjoe8" path="res://Underworld_door.tscn" id="2_j45ed"]
 [ext_resource type="PackedScene" uid="uid://b34cymfj2uuwt" path="res://Scenes/Player.tscn" id="3_vksvl"]
 [ext_resource type="PackedScene" uid="uid://bf87hxa1t6fcj" path="res://satyr.tscn" id="5_vqrot"]
-[ext_resource type="PackedScene" uid="uid://bgqow8278m4bw" path="res://Underworld_enemy.tscn" id="7_8plfw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k56e0"]
+size = Vector2(170, 69)
 
 [node name="Underworld" type="Node2D"]
 script = ExtResource("1_yd18q")
@@ -36,7 +38,7 @@ position = Vector2(-471, -66)
 scale = Vector2(0.75, 0.75)
 
 [node name="Area2D" parent="Ground" instance=ExtResource("2_j45ed")]
-position = Vector2(-442, -264)
+position = Vector2(-440, -281)
 
 [node name="Satyr" parent="." instance=ExtResource("5_vqrot")]
 position = Vector2(-327, 36)
@@ -45,12 +47,17 @@ position = Vector2(-327, 36)
 position = Vector2(-134, 87)
 scale = Vector2(0.5, 0.5)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("7_8plfw")]
-position = Vector2(-451, -135)
-scale = Vector2(1.5, 1.5)
-
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-709, -335)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(-7, 34, 177, 33, 176, -44, 358, -38, 359, 30, 545, 32, 550, 66, 548, 107, 591, 107, 597, 199, 625, 204, 631, 250, 673, 254, 678, 267, 722, 269, 728, 285, 960, 286, 964, 272, 1010, 269, 1012, 252, 1186, 252, 1188, 271, 1283, 271, 1284, 282, 1315, 285, 1318, 300, 1452, 300, 1458, 312, 1348, 312, 1344, 424, 1359, 441, 1477, 444, 1485, 639, 1379, 647, 1361, 691, 1372, 761, 1284, 769, 1285, 736, 1239, 736, 1236, 704, 1193, 706, 1189, 658, 1143, 656, 1140, 672, 835, 670, 836, 608, 802, 605, 802, 592, 182, 593, 180, 575, 101, 575, 101, 465, 66, 461, 65, 385, 48, 384, 50, 305, 34, 303, 36, 255, -13, 257, -13, 237, -62, 242, -58, 46, -46, 94, -13, 96, 50, -41, -148, -105, -208, 98, -175, 284, -136, 490, -14, 794, 262, 818, 604, 801, 940, 840, 1062, 836, 1590, 920, 1685, 751, 1762, 448, 1742, 227, 1606, 207, 1339, 123, 1035, 110, 797, 132, 674, -46, 419, -99, 130, -122)
+
+[node name="transition" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="transition"]
+position = Vector2(-447, -347.5)
+shape = SubResource("RectangleShape2D_k56e0")
+
+[connection signal="body_entered" from="transition" to="." method="_on_transition_body_entered"]
+[connection signal="body_exited" from="transition" to="." method="_on_transition_body_exited"]
