@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://cy2liqjqrxsgs"]
+[gd_scene load_steps=11 format=4 uid="uid://cy2liqjqrxsgs"]
 
 [ext_resource type="TileSet" uid="uid://cifl3nes63glb" path="res://new_tile_set.tres" id="1_4wx87"]
 [ext_resource type="PackedScene" uid="uid://csnm5yr36gg6b" path="res://waterfall.tscn" id="2_325gn"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b34cymfj2uuwt" path="res://Scenes/Player.tscn" id="7_6tup3"]
 [ext_resource type="PackedScene" uid="uid://bof3ctieofotc" path="res://character_body_2d.tscn" id="7_bbtca"]
 [ext_resource type="PackedScene" uid="uid://dahc2ej8m6dcf" path="res://goblin.tscn" id="9_d2bso"]
+[ext_resource type="PackedScene" uid="uid://c0pwgyx2e3amy" path="res://skeleton_guard.tscn" id="10_m6ad7"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -76,9 +77,9 @@ position = Vector2(871, 25)
 position = Vector2(801, -436)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("7_bbtca")]
-position = Vector2(1362, -353)
+position = Vector2(1335, -334)
 
-[node name="CharacterBody2D2" parent="." instance=ExtResource("7_6tup3")]
+[node name="player" parent="." instance=ExtResource("7_6tup3")]
 position = Vector2(1225, -139)
 scale = Vector2(0.35, 0.35)
 
@@ -90,3 +91,21 @@ position = Vector2(1145, -1)
 
 [node name="Goblin3" parent="." instance=ExtResource("9_d2bso")]
 position = Vector2(1643, -112)
+
+[node name="Skeleton1" parent="." instance=ExtResource("10_m6ad7")]
+position = Vector2(1410, -329)
+
+[node name="Skeleton2" parent="." instance=ExtResource("10_m6ad7")]
+position = Vector2(1351, -389)
+
+[node name="Skeleton3" parent="." instance=ExtResource("10_m6ad7")]
+position = Vector2(1281, -388)
+
+[node name="Marker2D" type="Marker2D" parent="." groups=["marker_group"]]
+position = Vector2(1277, -161)
+
+[node name="Marker2D3" type="Marker2D" parent="." groups=["marker_group"]]
+position = Vector2(1064, -249)
+
+[node name="Marker2D2" type="Marker2D" parent="." groups=["marker_group"]]
+position = Vector2(1110, -393)
