@@ -8,15 +8,20 @@ var player_alive = true
 var enemy_in_range = false
 var enemy_attack_cooldown = true
 var running = false
+var last_enemy_body = null
+var is_hurt = false
+var current_dir             = "Front" 
+@onready var actionable_finder: Area2D = $CharacterBody2D/actionable
 
 
 @onready var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var attacking: bool = false
-var current_dir = "none"
+
 
 func _ready() -> void: 
-	$AnimatedSprite2D.play("Idle")
+	anim_sprite.play(current_dir + "_Idle")
+	anim_sprite.animation_finished.connect(_on_animated_sprite_2d_animation_finished)
 
 func move(direction):
 	if direction == null:
@@ -34,6 +39,16 @@ func move(direction):
 		Global.InputDirection.DOWN:
 			new_vel.y = 1
 	new_vel = new_vel.normalized()
+
+	# remember facing even if you stop
+	if new_vel.x < 0:
+		current_dir = "Left"
+	elif new_vel.x > 0:
+		current_dir = "Right"
+	elif new_vel.y < 0:
+		current_dir = "Back"
+	elif new_vel.y > 0:
+		current_dir = "Front"
 	if Global.can_run and running:
 		velocity = new_vel * run_speed
 	else:
@@ -45,25 +60,30 @@ func _physics_process(delta):
 	enemy_attack()
 	attack()
 	update_health()
+	if Input.is_action_just_pressed("ui_accept"):
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].action()
+			return
+		
+			
 	if health <= 0:
 		player_alive = false
 		health = 0
-		$AnimatedSprite2D.play("Death")
+		anim_sprite.play(current_dir + "_Death")
 		print("player died...")
-	if velocity.x < 0:
-		$AnimatedSprite2D.flip_h = true
-	elif velocity.x > 0:
-		$AnimatedSprite2D.flip_h = false
-	
-	if not attacking:
-		if velocity.length() > 0:
-			if Global.can_run and running:
-				anim_sprite.play("Run")
-			else:
-				anim_sprite.play("Walk") 
+		self.queue_free()
+		return
+	if not attacking and not is_hurt and player_alive:
+		_update_movement_animation()
+func _update_movement_animation():
+	if velocity.length() > 0:
+		if Global.can_run and running:
+			anim_sprite.play(current_dir + "_Run")
 		else:
-			anim_sprite.play("Idle")  # Idle animation
-
+			anim_sprite.play(current_dir + "_Walk")
+	else:
+		anim_sprite.play(current_dir + "_Idle")					
 func run():
 	if Global.can_run and Input.is_action_pressed("run"):
 		running = true
@@ -72,11 +92,26 @@ func run():
 func player():
 	pass
 func enemy_attack():
-	if enemy_in_range and enemy_attack_cooldown == true:
+	if enemy_in_range and enemy_attack_cooldown:
+		is_hurt = true
 		health = health - 15
-		$AnimatedSprite2D.play("Take_Damage")
+		if last_enemy_body:
+			var rel = last_enemy_body.global_position - global_position
+			if abs(rel.x) > abs(rel.y):
+				if rel.x < 0:
+					anim_sprite.play("Left_Hurt")
+				else:
+					anim_sprite.play("Right_Hurt")
+			else:
+				if rel.y < 0:
+					anim_sprite.play("Back_Hurt")
+				else:
+					anim_sprite.play("Front_Hurt")
+		else:
+			anim_sprite.play(current_dir + "_Hurt")
 		enemy_attack_cooldown = false
 		$Attack_Cooldown.start()
+		$Hurt.start()
 		print("player -15 health")
 
 # This function is called when the player collects a gem.
@@ -92,22 +127,10 @@ func _on_attack_cooldown_timeout():
 	enemy_attack_cooldown = true
 
 func attack():
-	if Input.is_action_just_pressed("attack") and not attacking:
+	if Input.is_action_just_pressed("attack") and not attacking and player_alive:
 		attacking = true
 		Global.is_attacking = true
-		anim_sprite.play("Attack")
-		$Deal_attack.start()
-
-	elif Input.is_action_just_pressed("attack_2") and not attacking:
-		attacking = true
-		Global.is_attacking = true
-		anim_sprite.play("Magic_Blade_Attack")
-		$Deal_attack.start()
-
-	elif Input.is_action_just_pressed("attack_3") and not attacking:
-		attacking = true
-		Global.is_attacking = true
-		anim_sprite.play("Fire_Attack")
+		anim_sprite.play(current_dir + "_Attack")
 		$Deal_attack.start()
 		
 	
@@ -143,3 +166,15 @@ func _on_heal_timeout() -> void:
 			health = 100
 	if health <= 0:
 		health = 0
+
+
+func _on_animated_sprite_2d_animation_finished(anim_name) -> void:
+	if anim_name.ends_with("_Attack"):
+		attacking = false
+		Global.is_attacking = false
+	elif anim_name.ends_with("_Hurt"):
+		is_hurt = false
+
+
+func _on_hurt_timeout() -> void:
+	is_hurt = false

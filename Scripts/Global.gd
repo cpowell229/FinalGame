@@ -11,6 +11,7 @@ var underworld_door_posx = 0
 var underworld_door_posy = 0
 var player_start_posx = 0
 var player_start_posy = 0
+var passive = false
 
 func finish_transition():
 	if transition_scene:

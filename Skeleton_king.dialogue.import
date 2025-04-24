@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bfhlpxesmq1nv"
+path="res://.godot/imported/Skeleton_king.dialogue-79c472da0c1b7ce493283d59710a00ba.tres"
+
+[deps]
+
+source_file="res://Skeleton_king.dialogue"
+dest_files=["res://.godot/imported/Skeleton_king.dialogue-79c472da0c1b7ce493283d59710a00ba.tres"]
+
+[params]
+
+defaults=true

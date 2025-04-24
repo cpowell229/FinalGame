@@ -1,0 +1,11 @@
+~ approach
+Nathan: What do you seek, it is not often we have visitors to the sky temple.
+- I seek passage to the shrine.
+	Nathan: Ahhhh... another foolish mortal. I will grant you passage, but be warned, no mortal has ever reached the temple and returned alive.
+- Nothing.
+	Nathan: Do not waste my time.
+	=> END
+	- Start again => approach
+- Cancel => END
+Nathan: (Silence)
+=> END

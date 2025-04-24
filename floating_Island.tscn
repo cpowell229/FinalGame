@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://cy2liqjqrxsgs"]
+[gd_scene load_steps=15 format=4 uid="uid://cy2liqjqrxsgs"]
 
 [ext_resource type="TileSet" uid="uid://cifl3nes63glb" path="res://new_tile_set.tres" id="1_4wx87"]
 [ext_resource type="PackedScene" uid="uid://csnm5yr36gg6b" path="res://waterfall.tscn" id="2_325gn"]
@@ -8,8 +8,14 @@
 [ext_resource type="PackedScene" uid="uid://bmp1p7nfmt5ps" path="res://cloud.tscn" id="5_wockq"]
 [ext_resource type="PackedScene" uid="uid://b34cymfj2uuwt" path="res://Scenes/Player.tscn" id="7_6tup3"]
 [ext_resource type="PackedScene" uid="uid://bof3ctieofotc" path="res://character_body_2d.tscn" id="7_bbtca"]
-[ext_resource type="PackedScene" uid="uid://dahc2ej8m6dcf" path="res://goblin.tscn" id="9_d2bso"]
+[ext_resource type="PackedScene" uid="uid://cjfjwhg00jpn0" path="res://Scenes/actionable.tscn" id="8_2xi5l"]
+[ext_resource type="Resource" uid="uid://bfhlpxesmq1nv" path="res://Skeleton_king.dialogue" id="9_ldp8w"]
 [ext_resource type="PackedScene" uid="uid://c0pwgyx2e3amy" path="res://skeleton_guard.tscn" id="10_m6ad7"]
+[ext_resource type="PackedScene" uid="uid://dn0qeqywt228x" path="res://minotaur.tscn" id="11_nyu6u"]
+[ext_resource type="Script" path="res://minotaur.gd" id="13_p7cwv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sqxgr"]
+radius = 38.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -35,7 +41,7 @@ position = Vector2(1401, -251)
 position = Vector2(1315, -435)
 
 [node name="Area2D3" parent="TileMapLayer2" instance=ExtResource("4_vase3")]
-position = Vector2(1195, -340)
+position = Vector2(1166, -344)
 
 [node name="Area2D4" parent="TileMapLayer2" instance=ExtResource("5_wockq")]
 position = Vector2(610, -416)
@@ -77,20 +83,19 @@ position = Vector2(871, 25)
 position = Vector2(801, -436)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("7_bbtca")]
-position = Vector2(1323, -341)
+position = Vector2(1328, -334)
+
+[node name="actionable" parent="CharacterBody2D" instance=ExtResource("8_2xi5l")]
+position = Vector2(-1328, 334)
+dialogue_resource = ExtResource("9_ldp8w")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D/actionable"]
+position = Vector2(1328, -334)
+shape = SubResource("CircleShape2D_sqxgr")
 
 [node name="player" parent="." instance=ExtResource("7_6tup3")]
 position = Vector2(1220, -162)
 scale = Vector2(0.35, 0.35)
-
-[node name="Goblin1" parent="." instance=ExtResource("9_d2bso")]
-position = Vector2(1139, 9)
-
-[node name="Goblin2" parent="." instance=ExtResource("9_d2bso")]
-position = Vector2(1484, -141)
-
-[node name="Goblin3" parent="." instance=ExtResource("9_d2bso")]
-position = Vector2(1643, -112)
 
 [node name="Skeleton1" parent="." instance=ExtResource("10_m6ad7")]
 position = Vector2(1235, -225)
@@ -99,13 +104,18 @@ position = Vector2(1235, -225)
 position = Vector2(1477, -382)
 
 [node name="Skeleton3" parent="." instance=ExtResource("10_m6ad7")]
-position = Vector2(1085, -336)
+position = Vector2(1036, -314)
 
 [node name="Marker2D" type="Marker2D" parent="." groups=["marker_group"]]
-position = Vector2(1420, -391)
+position = Vector2(1370, -134)
 
 [node name="Marker2D3" type="Marker2D" parent="." groups=["marker_group"]]
-position = Vector2(1303, -98)
+position = Vector2(1107, -17)
 
 [node name="Marker2D2" type="Marker2D" parent="." groups=["marker_group"]]
-position = Vector2(1045, -301)
+position = Vector2(1070, -295)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("11_nyu6u")]
+position = Vector2(1063, -264)
+scale = Vector2(0.6, 0.6)
+script = ExtResource("13_p7cwv")

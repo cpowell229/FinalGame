@@ -11,10 +11,11 @@ var can_take_damage = true
 var is_dying = false
 var can_attack = true
 signal dead
-
+var dialogue_resource = preload("res://Skeleton_king.dialogue")
 func _ready() -> void:
 	$AnimatedSprite2D.animation_finished.connect(_on_animated_sprite_2d_animation_finished)
 	$AnimatedSprite2D.play("Front_Idle")
+	Global.passive = true
 func _physics_process(delta: float) -> void:
 	deal_with_attacks()
 	attack()
@@ -24,7 +25,7 @@ func _physics_process(delta: float) -> void:
 	 "Right_Attack", "Left_Attack", "Back_Attack", "Front_Attack",
 	 "Hurt_Right", "Hurt_Left", "Hurt_Back", "Hurt_Front"]:
 		return
-	if player_chase and player:
+	if player_chase and player and not Global.passive:
 		position += (player.position - position).normalized() * speed * delta
 		move_and_collide(Vector2.ZERO)
 		if (player.position.x - position.x) < 0:
@@ -48,6 +49,8 @@ func _physics_process(delta: float) -> void:
 
 func enemy():
 	pass
+func action():
+	DialogueManager.start_dialogue(dialogue_resource)
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -80,7 +83,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		emit_signal("dead")
 		queue_free()
 	elif current_anim in ["Right_Attack", "Left_Attack", "Back_Attack", "Front_Attack"]:
-		if player_chase and player:
+		if player_chase and player and not Global.passive:
 				if (player.position.x - position.x) < 0:
 					$AnimatedSprite2D.play("Left_Walk")
 				elif (player.position.x - position.x) > 0:
@@ -165,7 +168,7 @@ func deal_with_attacks():
 					$AnimatedSprite2D.play("Death_Back")
 			
 func attack():
-	if in_range and can_attack and not is_dying:
+	if in_range and can_attack and not is_dying and not Global.passive:
 		can_attack = false  
 		$attack_cooldown.start()
 		if (player.position.x - position.x) < 0:

@@ -41,7 +41,7 @@ scale = Vector2(0.75, 0.75)
 position = Vector2(-440, -281)
 
 [node name="Satyr" parent="." instance=ExtResource("5_vqrot")]
-position = Vector2(-327, 36)
+position = Vector2(-315, 75)
 
 [node name="Player" parent="." instance=ExtResource("3_vksvl")]
 position = Vector2(-134, 87)
