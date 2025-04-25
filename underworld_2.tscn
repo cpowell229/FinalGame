@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://bowtf3hy1e5s6"]
+[gd_scene load_steps=7 format=4 uid="uid://bowtf3hy1e5s6"]
 
 [ext_resource type="Script" path="res://underworld_2.gd" id="1_o088y"]
 [ext_resource type="TileSet" uid="uid://cifl3nes63glb" path="res://new_tile_set.tres" id="1_pah5g"]
 [ext_resource type="PackedScene" uid="uid://cqal5p76s3k28" path="res://underworld_prop.tscn" id="2_h0gha"]
 [ext_resource type="PackedScene" uid="uid://d01oa8n221mog" path="res://Scenes/portal.tscn" id="3_fecvl"]
 [ext_resource type="PackedScene" uid="uid://b34cymfj2uuwt" path="res://Scenes/Player.tscn" id="3_nfnbf"]
-[ext_resource type="PackedScene" uid="uid://28eex0y8a8p5" path="res://skelton_enemy.tscn" id="5_uwci1"]
 [ext_resource type="PackedScene" uid="uid://bub5g3mm6kxwr" path="res://Golem.tscn" id="6_3o2ff"]
 
 [node name="Node2D" type="Node2D"]
@@ -34,18 +33,6 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(109, 11)
 scale = Vector2(1.65, 1.65)
 
-[node name="skeleton" parent="." instance=ExtResource("5_uwci1")]
-position = Vector2(804, -227)
-scale = Vector2(0.5, 0.5)
-
-[node name="skeleton3" parent="." instance=ExtResource("5_uwci1")]
-position = Vector2(551, -287)
-scale = Vector2(0.5, 0.5)
-
-[node name="skeleton2" parent="." instance=ExtResource("5_uwci1")]
-position = Vector2(588, -199)
-scale = Vector2(0.5, 0.5)
-
 [node name="CharacterBody2D2" parent="." instance=ExtResource("6_3o2ff")]
-position = Vector2(681, -310)
+position = Vector2(628, -269)
 scale = Vector2(2, 2)

@@ -94,8 +94,7 @@ position = Vector2(1328, -334)
 shape = SubResource("CircleShape2D_sqxgr")
 
 [node name="player" parent="." instance=ExtResource("7_6tup3")]
-position = Vector2(1220, -162)
-scale = Vector2(0.35, 0.35)
+position = Vector2(1236, -32)
 
 [node name="Skeleton1" parent="." instance=ExtResource("10_m6ad7")]
 position = Vector2(1235, -225)

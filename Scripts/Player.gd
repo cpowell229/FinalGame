@@ -8,7 +8,6 @@ var player_alive = true
 var enemy_in_range = false
 var enemy_attack_cooldown = true
 var running = false
-var last_enemy_body = null
 var is_hurt = false
 var current_dir             = "Front" 
 @onready var actionable_finder: Area2D = $CharacterBody2D/actionable
@@ -95,20 +94,7 @@ func enemy_attack():
 	if enemy_in_range and enemy_attack_cooldown:
 		is_hurt = true
 		health = health - 15
-		if last_enemy_body:
-			var rel = last_enemy_body.global_position - global_position
-			if abs(rel.x) > abs(rel.y):
-				if rel.x < 0:
-					anim_sprite.play("Left_Hurt")
-				else:
-					anim_sprite.play("Right_Hurt")
-			else:
-				if rel.y < 0:
-					anim_sprite.play("Back_Hurt")
-				else:
-					anim_sprite.play("Front_Hurt")
-		else:
-			anim_sprite.play(current_dir + "_Hurt")
+		anim_sprite.play(current_dir + "_Hurt")
 		enemy_attack_cooldown = false
 		$Attack_Cooldown.start()
 		$Hurt.start()
@@ -145,13 +131,11 @@ func _on_deal_attack_timeout() -> void:
 func _on_hitbox_body_entered(body: Node2D) -> void:
 	if body.has_method("enemy"):
 		enemy_in_range = true
-		last_enemy_body = body
 
 
 func _on_hitbox_body_exited(body: Node2D) -> void:
 	if body.has_method("enemy"):
 		enemy_in_range = false
-		last_enemy_body = null
 
 func update_health():
 	var healthBar = $HealthBar
