@@ -145,11 +145,13 @@ func _on_deal_attack_timeout() -> void:
 func _on_hitbox_body_entered(body: Node2D) -> void:
 	if body.has_method("enemy"):
 		enemy_in_range = true
+		last_enemy_body = body
 
 
 func _on_hitbox_body_exited(body: Node2D) -> void:
 	if body.has_method("enemy"):
 		enemy_in_range = false
+		last_enemy_body = null
 
 func update_health():
 	var healthBar = $HealthBar

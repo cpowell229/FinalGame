@@ -45,7 +45,7 @@ position = Vector2(-315, 75)
 
 [node name="Player" parent="." instance=ExtResource("3_vksvl")]
 position = Vector2(-134, 87)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(1.5, 1.5)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-709, -335)
