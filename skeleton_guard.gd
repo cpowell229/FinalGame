@@ -12,7 +12,7 @@ var can_attack = true
 var return_to = false
 signal dead
 
-@export var group_name : String = "marker_group"
+@export var group_name : String = "patrol"
  
 var positions : Array 
 var temp_positions : Array

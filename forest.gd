@@ -5,8 +5,8 @@ var lever_2 = false
 var valid = false
 
 func _ready():
-	$Background/lever_1.connect("activated", Callable(self, "_on_lever_1"))
-	$Background/lever_2.connect("activated", Callable(self, "_on_lever_2"))
+	$Background/TileMapLayer2/lever_1.connect("activated", Callable(self, "_on_lever_1"))
+	$Background/TileMapLayer2/lever_2.connect("activated", Callable(self, "_on_lever_2"))
 
 func _on_lever_1():
 	lever_1 = true
