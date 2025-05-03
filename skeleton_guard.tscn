@@ -927,9 +927,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wqe2k"]
-radius = 6.0
-height = 28.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_422kh"]
+radius = 4.47214
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r1kgk"]
 radius = 39.2046
@@ -937,23 +936,28 @@ radius = 39.2046
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5rafq"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_engtq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_s070d")
 animation = &"Front_Idle"
+offset = Vector2(0, -15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_wqe2k")
+position = Vector2(1, -10)
+shape = SubResource("CircleShape2D_422kh")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -16)
 shape = SubResource("CircleShape2D_r1kgk")
 
 [node name="hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, -16)
 shape = SubResource("CapsuleShape2D_5rafq")
 
 [node name="take_damage_cooldown" type="Timer" parent="."]
