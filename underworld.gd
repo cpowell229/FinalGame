@@ -8,9 +8,9 @@ var pillar3_activated = false
 var valid = false
 
 func _ready():
-	$Ground/Structures/p1.connect("activated", Callable(self, "_on_pillar1_activated"))
-	$Ground/Structures/p2.connect("activated", Callable(self, "_on_pillar2_activated"))
-	$Ground/Structures/p3.connect("activated", Callable(self, "_on_pillar3_activated"))
+	$ysort/Ground/Structures/p1.connect("activated", Callable(self, "_on_pillar1_activated"))
+	$ysort/Ground/Structures/p2.connect("activated", Callable(self, "_on_pillar2_activated"))
+	$ysort/Ground/Structures/p3.connect("activated", Callable(self, "_on_pillar3_activated"))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

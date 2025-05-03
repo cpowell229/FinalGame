@@ -1407,9 +1407,11 @@ script = ExtResource("1_fbb42")
 position = Vector2(0, -0.333333)
 sprite_frames = SubResource("SpriteFrames_8orog")
 animation = &"Back_Hurt"
+offset = Vector2(0, -15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.333336, -0.666668)
+y_sort_enabled = true
+position = Vector2(1, -11)
 shape = SubResource("CircleShape2D_xdo62")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -1427,7 +1429,7 @@ script = ExtResource("7_cd8hi")
 position = Vector2(52.3333, 33.6667)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(-51.6666, -33.3334)
+position = Vector2(-51.3333, -46.6667)
 shape = SubResource("CapsuleShape2D_ppq88")
 
 [node name="Attack_Cooldown" type="Timer" parent="."]
@@ -1438,10 +1440,10 @@ wait_time = 1.4
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 modulate = Color(0.271336, 0.538621, 3.85046e-07, 1)
-offset_left = -16.0
-offset_top = 36.0
-offset_right = 17.0
-offset_bottom = 52.0
+offset_left = -9.0
+offset_top = 6.0
+offset_right = 9.0
+offset_bottom = 11.0
 show_percentage = false
 
 [node name="Heal" type="Timer" parent="."]

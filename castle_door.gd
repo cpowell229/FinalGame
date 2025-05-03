@@ -1,4 +1,4 @@
-extends Area2D
+extends StaticBody2D
 signal activated
 var active = false
 
@@ -25,4 +25,5 @@ func action():
 func _on_animated_sprite_2d_2_animation_finished() -> void:
 	if $AnimatedSprite2D2.animation == "Opening":
 		$AnimatedSprite2D.play("Open")
+		$CollisionShape2D3.set_deferred("disabled", true)
 		
