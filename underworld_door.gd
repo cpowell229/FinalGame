@@ -1,4 +1,4 @@
-extends Area2D
+extends StaticBody2D
 var in_range = false
 signal activated
 var active = false
@@ -19,10 +19,16 @@ func action():
 		if $AnimatedSprite2D.animation != "Opening":
 			$AnimatedSprite2D.play("Opening")
 			
+			
 
 func _on_interaction_zone_body_entered(body):
 	if body.name == "Player":
 		in_range = true
+		if Global.three_pillars:
+			$CollisionShape2D.set_deferred("disabled", true)
+		else:
+			$CollisionShape2D.set_deferred("disabled", false)
+			
 
 
 func _on_interaction_zone_body_exited(body: Node2D) -> void:

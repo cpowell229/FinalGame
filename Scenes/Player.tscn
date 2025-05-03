@@ -1392,9 +1392,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hply6"]
-radius = 27.3333
-height = 106.667
+[sub_resource type="CircleShape2D" id="CircleShape2D_xdo62"]
+radius = 6.67499
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ppq88"]
 radius = 67.0
@@ -1411,7 +1410,7 @@ animation = &"Back_Hurt"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.333336, -0.666668)
-shape = SubResource("CapsuleShape2D_hply6")
+shape = SubResource("CircleShape2D_xdo62")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)

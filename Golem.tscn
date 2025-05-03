@@ -1077,7 +1077,7 @@ script = ExtResource("1_xhwdr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_lmdiq")
-animation = &"Hurt_Back"
+animation = &"Death_Back"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1.5)
