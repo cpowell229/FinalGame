@@ -59,11 +59,12 @@ size = Vector2(16.5, 20)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mv8e2"]
 height = 80.0
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="StaticBody2D"]
 script = ExtResource("1_ceo85")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wduhv")
+autoplay = "default"
 frame_progress = 0.349738
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
