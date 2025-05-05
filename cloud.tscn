@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://bmp1p7nfmt5ps"]
 
-[ext_resource type="Script" path="res://cloud.gd" id="1_53q64"]
+[ext_resource type="Script" path="res://Scripts/cloud.gd" id="1_53q64"]
 [ext_resource type="Texture2D" uid="uid://cguoo78j3bwd5" path="res://imports/craftpix-net-477432-flying-islands-pixel-art-top-down-tileset/PNG/Clouds_animated1.png" id="1_ymet0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w521w"]

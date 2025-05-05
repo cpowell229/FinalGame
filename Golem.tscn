@@ -1,6 +1,6 @@
 [gd_scene load_steps=147 format=3 uid="uid://bub5g3mm6kxwr"]
 
-[ext_resource type="Script" path="res://golem.gd" id="1_xhwdr"]
+[ext_resource type="Script" path="res://Scripts/golem.gd" id="1_xhwdr"]
 [ext_resource type="Texture2D" uid="uid://0m4tmh6b4a85" path="res://imports/craftpix-net-186565-golem-pixel-art-top-down-sprite-pack/PNG/Golem2/Attack/Golem2_Attack_full.png" id="2_83aol"]
 [ext_resource type="Texture2D" uid="uid://xwreo6f88h2i" path="res://imports/craftpix-net-186565-golem-pixel-art-top-down-sprite-pack/PNG/Golem2/Idle/Golem2_Idle_full.png" id="3_mscig"]
 [ext_resource type="Texture2D" uid="uid://wk00is88fw0o" path="res://imports/craftpix-net-186565-golem-pixel-art-top-down-sprite-pack/PNG/Golem2/Death/Golem2_Death_full.png" id="4_3sto0"]

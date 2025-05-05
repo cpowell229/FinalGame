@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://dfguepk64tx46"]
 
-[ext_resource type="Script" path="res://underworld.gd" id="1_ll1jm"]
+[ext_resource type="Script" path="res://Scripts/underworld.gd" id="1_ll1jm"]
 [ext_resource type="TileSet" uid="uid://cifl3nes63glb" path="res://new_tile_set.tres" id="2_0wo33"]
 [ext_resource type="PackedScene" uid="uid://cno1jc7wnq7f0" path="res://underworld_pillar.tscn" id="3_e21w6"]
 [ext_resource type="PackedScene" uid="uid://cqw7e28wxjoe8" path="res://Underworld_door.tscn" id="4_1bnjx"]

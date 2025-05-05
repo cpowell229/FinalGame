@@ -1,6 +1,6 @@
 [gd_scene load_steps=127 format=3 uid="uid://c0pwgyx2e3amy"]
 
-[ext_resource type="Script" path="res://skeleton_guard.gd" id="1_engtq"]
+[ext_resource type="Script" path="res://Scripts/skeleton_guard.gd" id="1_engtq"]
 [ext_resource type="Texture2D" uid="uid://g0v67qf65gr6" path="res://craftpix-net-475945-top-down-pixel-skeletons-character-sprite-pack/PNG/Skeleton2/Attack/Skeleton2_Attack_full.png" id="1_yqqpv"]
 [ext_resource type="Texture2D" uid="uid://c7g7biki0ep0v" path="res://craftpix-net-475945-top-down-pixel-skeletons-character-sprite-pack/PNG/Skeleton2/Idle/Skeleton2_Idle_full.png" id="2_vkn8n"]
 [ext_resource type="Texture2D" uid="uid://b85hpmg1rq84s" path="res://craftpix-net-475945-top-down-pixel-skeletons-character-sprite-pack/PNG/Skeleton2/Walk/Skeleton2_Walk_full.png" id="3_c3ft1"]

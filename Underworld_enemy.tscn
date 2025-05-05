@@ -1,7 +1,7 @@
 [gd_scene load_steps=62 format=3 uid="uid://bgqow8278m4bw"]
 
 [ext_resource type="Texture2D" uid="uid://bvf4o6rwqof84" path="res://NightBorne/NightBorne.png" id="1_5dydd"]
-[ext_resource type="Script" path="res://enemy.gd" id="1_ybl8c"]
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_ybl8c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_64q1q"]
 atlas = ExtResource("1_5dydd")

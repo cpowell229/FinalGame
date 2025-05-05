@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b34cymfj2uuwt" path="res://Scenes/Player.tscn" id="10_l3leo"]
 [ext_resource type="PackedScene" uid="uid://c0pwgyx2e3amy" path="res://skeleton_guard.tscn" id="11_6bdkj"]
 [ext_resource type="PackedScene" uid="uid://dn0qeqywt228x" path="res://minotaur.tscn" id="12_7go81"]
-[ext_resource type="Script" path="res://minotaur.gd" id="13_px3rj"]
+[ext_resource type="Script" path="res://Scripts/minotaur.gd" id="13_px3rj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sqxgr"]
 radius = 38.0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=139 format=3 uid="uid://bof3ctieofotc"]
 
 [ext_resource type="Texture2D" uid="uid://d2faabr5ygjar" path="res://imports/craftpix-net-278926-top-down-pixel-lich-character-sprites (1)/PNG/Lich3/Attack/Lich3_Attack_full.png" id="1_2eit5"]
-[ext_resource type="Script" path="res://skeleton_king.gd" id="1_v17ek"]
+[ext_resource type="Script" path="res://Scripts/skeleton_king.gd" id="1_v17ek"]
 [ext_resource type="Texture2D" uid="uid://sy6chieqb8tb" path="res://imports/craftpix-net-278926-top-down-pixel-lich-character-sprites (1)/PNG/Lich3/Idle/Lich3_Idle_full.png" id="2_f2n1r"]
 [ext_resource type="Texture2D" uid="uid://lyqrduu0ylcl" path="res://imports/craftpix-net-278926-top-down-pixel-lich-character-sprites (1)/PNG/Lich3/Walk/Lich3_Walk_full.png" id="3_qa3gt"]
 [ext_resource type="Texture2D" uid="uid://10y66x7ptbsk" path="res://imports/craftpix-net-278926-top-down-pixel-lich-character-sprites (1)/PNG/Lich3/Death/Lich3_Death_full.png" id="4_cdpbw"]

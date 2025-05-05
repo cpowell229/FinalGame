@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=4 uid="uid://brw1lcn7smrm4"]
 
-[ext_resource type="Script" path="res://forest.gd" id="1_ankn6"]
+[ext_resource type="Script" path="res://Scripts/forest.gd" id="1_ankn6"]
 [ext_resource type="TileSet" uid="uid://cifl3nes63glb" path="res://new_tile_set.tres" id="2_c82fv"]
 [ext_resource type="PackedScene" uid="uid://c0pwgyx2e3amy" path="res://skeleton_guard.tscn" id="3_bcd3f"]
 [ext_resource type="PackedScene" uid="uid://dn5pmc41a5hja" path="res://cursed_ent.tscn" id="4_wny1f"]

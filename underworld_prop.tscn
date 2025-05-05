@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://cqal5p76s3k28"]
 
 [ext_resource type="Texture2D" uid="uid://ctcmyelf56rre" path="res://Free-Undead-Tileset-Top-Down-Pixel-Art/PNG/Animation4.png" id="1_mu3ne"]
-[ext_resource type="Script" path="res://underworld_prop.gd" id="1_qn2gp"]
+[ext_resource type="Script" path="res://Scripts/underworld_prop.gd" id="1_qn2gp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dinno"]
 atlas = ExtResource("1_mu3ne")

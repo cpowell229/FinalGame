@@ -1,7 +1,7 @@
 [gd_scene load_steps=39 format=3 uid="uid://bf87hxa1t6fcj"]
 
 [ext_resource type="Texture2D" uid="uid://bkbc25wi7noqd" path="res://Free-Satyr-Sprite-Sheet-Pixel-Art-Pack/Satyr_2/Attack.png" id="1_7e56p"]
-[ext_resource type="Script" path="res://satyr.gd" id="1_g34ba"]
+[ext_resource type="Script" path="res://Scripts/satyr.gd" id="1_g34ba"]
 [ext_resource type="Texture2D" uid="uid://cjfyecpny08f" path="res://Free-Satyr-Sprite-Sheet-Pixel-Art-Pack/Satyr_2/Hurt.png" id="2_f21ss"]
 [ext_resource type="Texture2D" uid="uid://6a6cydbjt357" path="res://Free-Satyr-Sprite-Sheet-Pixel-Art-Pack/Satyr_2/Idle.png" id="3_20ees"]
 [ext_resource type="Texture2D" uid="uid://bm3kedms7mtfq" path="res://Free-Satyr-Sprite-Sheet-Pixel-Art-Pack/Satyr_2/Walk.png" id="4_acrk4"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://bebi8318ngdme"]
 
-[ext_resource type="Script" path="res://floating_statue_2.gd" id="1_6r21j"]
+[ext_resource type="Script" path="res://Scripts/floating_statue_2.gd" id="1_6r21j"]
 [ext_resource type="Texture2D" uid="uid://bnnxl7xqyokj0" path="res://Statue_animated.png" id="1_l140m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pwqog"]

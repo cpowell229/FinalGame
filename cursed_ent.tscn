@@ -1,6 +1,6 @@
 [gd_scene load_steps=119 format=3 uid="uid://dn5pmc41a5hja"]
 
-[ext_resource type="Script" path="res://cursed_ent.gd" id="1_ny0ej"]
+[ext_resource type="Script" path="res://Scripts/cursed_ent.gd" id="1_ny0ej"]
 [ext_resource type="Texture2D" uid="uid://j0m5j1t01j3x" path="res://craftpix-net-971710-top-down-pixel-ent-character-sprites (1)/PNG/Ent1/Attack/Ent1_Attack_full.png" id="1_u3g27"]
 [ext_resource type="Texture2D" uid="uid://dqiciofljhuyc" path="res://craftpix-net-971710-top-down-pixel-ent-character-sprites (1)/PNG/Ent1/Death/Ent1_Death_full.png" id="2_tklu4"]
 [ext_resource type="Texture2D" uid="uid://vgutk3lqykrw" path="res://craftpix-net-971710-top-down-pixel-ent-character-sprites (1)/PNG/Ent1/Hurt/Ent1_Hurt_full.png" id="3_jv1mb"]

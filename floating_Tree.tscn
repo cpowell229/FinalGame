@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://h6leum7ijsk7"]
 
 [ext_resource type="Texture2D" uid="uid://bw3b3ndrvl3mu" path="res://imports/craftpix-net-477432-flying-islands-pixel-art-top-down-tileset/PNG/Tree_animated.png" id="1_bs6rq"]
-[ext_resource type="Script" path="res://floating_tree.gd" id="1_myb0l"]
+[ext_resource type="Script" path="res://Scripts/floating_tree.gd" id="1_myb0l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_31a57"]
 atlas = ExtResource("1_bs6rq")

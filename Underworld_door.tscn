@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cqw7e28wxjoe8"]
 
-[ext_resource type="Script" path="res://underworld_door.gd" id="1_dtmb7"]
+[ext_resource type="Script" path="res://Scripts/underworld_door.gd" id="1_dtmb7"]
 [ext_resource type="Texture2D" uid="uid://csqcsmrweq4ur" path="res://Raven Fantasy - Pixel Art Tileset - The Underworld/RPG Maker MV and MZ/!$UW_EXTRAS2.png" id="1_rf3nc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jof06"]

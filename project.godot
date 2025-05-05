@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*res://Scripts/Global.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-LevelManager="*res://LevelManager.gd"
+LevelManager="*res://Scripts/LevelManager.gd"
 
 [dialogue_manager]
 

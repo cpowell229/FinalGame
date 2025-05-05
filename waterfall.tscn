@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://csnm5yr36gg6b"]
 
 [ext_resource type="Texture2D" uid="uid://ovj53hshls34" path="res://imports/craftpix-net-477432-flying-islands-pixel-art-top-down-tileset/PNG/Waterfalls.png" id="1_aos8l"]
-[ext_resource type="Script" path="res://waterfall.gd" id="1_nopj7"]
+[ext_resource type="Script" path="res://Scripts/waterfall.gd" id="1_nopj7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vl61t"]
 atlas = ExtResource("1_aos8l")

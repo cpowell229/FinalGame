@@ -1,7 +1,7 @@
 [gd_scene load_steps=139 format=3 uid="uid://dahc2ej8m6dcf"]
 
 [ext_resource type="Texture2D" uid="uid://biid0ftq3301h" path="res://Free-Top-Down-Orc-Game-Character-Pixel-Art/PNG/Orc1/Orc1_attack/orc1_attack_full.png" id="1_2voxm"]
-[ext_resource type="Script" path="res://goblin.gd" id="1_b5qhx"]
+[ext_resource type="Script" path="res://Scripts/goblin.gd" id="1_b5qhx"]
 [ext_resource type="Texture2D" uid="uid://dw0llb1j11nbj" path="res://Free-Top-Down-Orc-Game-Character-Pixel-Art/PNG/Orc1/Orc1_idle/orc1_idle_full.png" id="2_xr3t7"]
 [ext_resource type="Texture2D" uid="uid://ckh3ad6k4ymel" path="res://Free-Top-Down-Orc-Game-Character-Pixel-Art/PNG/Orc1/Orc1_walk/orc1_walk_full.png" id="3_hperg"]
 [ext_resource type="Texture2D" uid="uid://ced7fwnr3y80t" path="res://Free-Top-Down-Orc-Game-Character-Pixel-Art/PNG/Orc1/Orc1_death/orc1_death_full.png" id="4_vfbrj"]
