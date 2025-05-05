@@ -53,7 +53,7 @@ position = Vector2(123, -2838)
 position = Vector2(-1840, -894)
 
 [node name="CharacterBody2D2" parent="ysort/TileMapLayer2" instance=ExtResource("5_sfsxx")]
-position = Vector2(-993, -2133)
+position = Vector2(146, -1148)
 
 [node name="CharacterBody2D9" parent="ysort/TileMapLayer2" instance=ExtResource("6_fq3si")]
 position = Vector2(-1943, -2902)

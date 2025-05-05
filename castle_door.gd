@@ -25,5 +25,7 @@ func action():
 func _on_animated_sprite_2d_2_animation_finished() -> void:
 	if $AnimatedSprite2D2.animation == "Opening":
 		$AnimatedSprite2D.play("Open")
+		$CollisionShape2D2.set_deferred("disabled", true)
+		$CollisionShape2D.set_deferred("disabled", true)
 		$CollisionShape2D3.set_deferred("disabled", true)
 		

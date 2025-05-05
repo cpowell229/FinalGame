@@ -48,3 +48,4 @@ func transition():
 		if Global.current_scene == "underworld":
 			get_tree().change_scene_to_file("res://Scenes/Levels/underworld_2.tscn")
 			Global.finish_transition()
+			LevelManager.current_index += 1

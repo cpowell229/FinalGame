@@ -1489,7 +1489,7 @@ offset_bottom = -64.0
 text = "Eternal Fire"
 
 [node name="prompt" type="Timer" parent="."]
-wait_time = 1.5
+wait_time = 2.5
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

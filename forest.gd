@@ -5,6 +5,7 @@ var lever_2 = false
 var valid = false
 
 func _ready():
+	Global.active = true
 	$ysort/TileMapLayer2/lever_1.connect("activated", Callable(self, "_on_lever_1"))
 	$ysort/TileMapLayer2/lever_2.connect("activated", Callable(self, "_on_lever_2"))
 
