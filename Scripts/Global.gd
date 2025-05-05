@@ -14,6 +14,7 @@ var player_start_posy = 0
 var passive = false
 var levers = false
 var active = false
+var trigger = false
 
 func finish_transition():
 	if transition_scene:

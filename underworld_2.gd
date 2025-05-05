@@ -9,6 +9,7 @@ var kill4 = false
 var valid = false
 
 func _ready():
+	Global.active = true
 	$CharacterBody2D2.connect("dead", Callable(self, "_on_pillar4_activated"))
 
 

@@ -18,9 +18,9 @@ func _on_pillar2_activated():
 func check_pillars():
 	if pillar1_activated and pillar2_activated:
 		Global.active = true
+		Global.trigger = true
 		spawn_azrael()
 		spawn_floating_pillar()
-		spawn_enemies()
 
 func spawn_azrael():
 	var azrael_scene = preload("res://Scenes/Azrael.tscn")
@@ -35,19 +35,5 @@ func spawn_floating_pillar():
 	pillar2.position = Vector2(-679, 881)
 	add_child(pillar)
 	add_child(pillar2)
-func spawn_enemies():
-	## could do a loop but this makes it easier to spawn them in exact places and the loop was buggy
-		var enemy = preload("res://skeleton_guard.tscn")
-		var enemy1 = enemy.instantiate()
-		var enemy2 = enemy.instantiate()
-		var enemy3 = enemy.instantiate()
-		var enemy4 = enemy.instantiate()
-		enemy1.position = Vector2(1346, 379)
-		enemy2.position = Vector2(1595, 773)
-		enemy3.position = Vector2(1829, 381)
-		enemy4.position = Vector2(1666, 179)
-		add_child(enemy1)
-		add_child(enemy2)
-		add_child(enemy3)
-		add_child(enemy4)
+
 	

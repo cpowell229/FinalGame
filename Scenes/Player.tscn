@@ -1453,6 +1453,44 @@ autostart = true
 [node name="Hurt" type="Timer" parent="."]
 wait_time = 0.8
 
+[node name="level_1" type="Label" parent="."]
+offset_left = -142.0
+offset_top = -88.0
+offset_right = 145.0
+offset_bottom = -65.0
+text = "The portal is making strange noises..."
+
+[node name="level_3" type="Label" parent="."]
+offset_left = -158.0
+offset_top = -87.0
+offset_right = 358.0
+offset_bottom = -64.0
+text = "Something doesn't feel right, I should head straight for the portal..."
+
+[node name="level_4" type="Label" parent="."]
+offset_left = -143.0
+offset_top = -87.0
+offset_right = 142.0
+offset_bottom = -64.0
+text = "I wonder where the portal could be..."
+
+[node name="level_5" type="Label" parent="."]
+offset_left = -81.0
+offset_top = -87.0
+offset_right = 71.0
+offset_bottom = -64.0
+text = "This is gonna hurt..."
+
+[node name="level_2" type="Label" parent="."]
+offset_left = -47.0
+offset_top = -87.0
+offset_right = 42.0
+offset_bottom = -64.0
+text = "Eternal Fire"
+
+[node name="prompt" type="Timer" parent="."]
+wait_time = 1.5
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="area_exited" from="Hitbox" to="." method="_on_hitbox_area_exited"]
@@ -1462,3 +1500,4 @@ wait_time = 0.8
 [connection signal="timeout" from="Deal_attack" to="." method="_on_deal_attack_timeout"]
 [connection signal="timeout" from="Heal" to="." method="_on_heal_timeout"]
 [connection signal="timeout" from="Hurt" to="." method="_on_hurt_timeout"]
+[connection signal="timeout" from="prompt" to="." method="_on_prompt_timeout"]

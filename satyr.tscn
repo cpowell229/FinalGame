@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bf87hxa1t6fcj"]
+[gd_scene load_steps=39 format=3 uid="uid://bf87hxa1t6fcj"]
 
 [ext_resource type="Texture2D" uid="uid://bkbc25wi7noqd" path="res://Free-Satyr-Sprite-Sheet-Pixel-Art-Pack/Satyr_2/Attack.png" id="1_7e56p"]
 [ext_resource type="Script" path="res://satyr.gd" id="1_g34ba"]
@@ -243,6 +243,9 @@ animations = [{
 radius = 11.0
 height = 92.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_87014"]
+radius = 78.3135
+
 [node name="Satyr" type="CharacterBody2D"]
 script = ExtResource("1_g34ba")
 
@@ -255,4 +258,12 @@ frame_progress = 0.525525
 position = Vector2(1, 21)
 shape = SubResource("CapsuleShape2D_0yxxq")
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 26)
+shape = SubResource("CircleShape2D_87014")
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

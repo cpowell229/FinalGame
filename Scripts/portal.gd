@@ -14,7 +14,7 @@ func _ready() -> void:
 
 
 func _process(delta):
-	if Global.active:
+	if Global.trigger:
 		if player_in_range and Input.is_action_just_pressed("interact"):
 			print("E pressed!")
 			activate_portal()
@@ -24,7 +24,7 @@ func activate_portal():
 	LevelManager.load_next_level_from(here)
 
 func handle_animation():
-	if Global.active:
+	if Global.trigger:
 		var current_anim = $AnimatedSprite2D.animation
 		if player_in_range and current_anim != "Opening" and current_anim != "Idle":
 			$AnimatedSprite2D.play("Opening")
@@ -44,7 +44,7 @@ func _on_zone_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):
 		player_in_range = true
 		handle_animation()
-		if Global.active:
+		if Global.trigger:
 			prompt_label.visible = true
 
 
@@ -52,5 +52,5 @@ func _on_zone_body_exited(body: Node2D) -> void:
 	if body.has_method("player"):
 		player_in_range = false
 		handle_animation()
-		if Global.active:
+		if Global.trigger:
 			prompt_label.visible = false

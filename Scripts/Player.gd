@@ -1,5 +1,11 @@
 extends CharacterBody2D
-
+var _flag_last_frame : bool = false 
+@onready var prompt_label = $level_1
+@onready var prompt_label1 = $level_2
+@onready var prompt_label2 = $level_3
+@onready var prompt_label3 = $level_4
+@onready var prompt_label4 = $level_5
+var prompt_active = false
 var walk_speed = 200
 var run_speed = 400
 var inventory: Array = []
@@ -19,6 +25,11 @@ var attacking: bool = false
 
 
 func _ready() -> void: 
+	prompt_label.visible = false
+	prompt_label1.visible = false
+	prompt_label2.visible = false
+	prompt_label3.visible = false
+	prompt_label4.visible = false
 	anim_sprite.play(current_dir + "_Idle")
 	anim_sprite.animation_finished.connect(_on_animated_sprite_2d_animation_finished)
 
@@ -54,6 +65,7 @@ func move(direction):
 		velocity = new_vel * walk_speed
 
 func _physics_process(delta):
+	handle_prompts()
 	run()
 	move_and_slide()
 	enemy_attack()
@@ -100,10 +112,25 @@ func enemy_attack():
 		$Hurt.start()
 		print("player -15 health")
 
-# This function is called when the player collects a gem.
-func add_to_inventory(item):
-	inventory.append(item)
-	print("Picked up: ", item)
+func handle_prompts():
+	var flag_now = Global.active
+	if flag_now and not _flag_last_frame:
+		if LevelManager.current_index == 0:
+			prompt_label.visible = true
+			$prompt.start()
+		elif LevelManager.current_index == 1:
+			prompt_label1.visible = true
+			$prompt.start()
+		elif LevelManager.current_index == 2:
+			prompt_label2.visible = true
+			$prompt.start()
+		elif LevelManager.current_index == 3:
+			prompt_label3.visible = true
+			$prompt.start()
+		elif LevelManager.current_index == 4:
+			prompt_label4.visible = true
+			$prompt.start()
+	_flag_last_frame = flag_now 
 
 		
 
@@ -164,3 +191,13 @@ func _on_animated_sprite_2d_animation_finished(anim_name) -> void:
 
 func _on_hurt_timeout() -> void:
 	is_hurt = false
+
+
+func _on_prompt_timeout() -> void:
+	prompt_label.visible = false
+	prompt_label1.visible = false
+	prompt_label2.visible = false
+	prompt_label3.visible = false
+	prompt_label4.visible = false
+	Global.active = false
+	_flag_last_frame      = false  
