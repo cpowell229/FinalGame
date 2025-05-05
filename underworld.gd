@@ -46,5 +46,5 @@ func _on_transition_body_exited(body):
 func transition():
 	if Global.transition_scene:
 		if Global.current_scene == "underworld":
-			get_tree().change_scene_to_file("res://underworld_2.tscn")
+			get_tree().change_scene_to_file("res://Scenes/Levels/underworld_2.tscn")
 			Global.finish_transition()

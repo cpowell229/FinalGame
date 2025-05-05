@@ -13,12 +13,13 @@ var player_start_posx = 0
 var player_start_posy = 0
 var passive = false
 var levers = false
+var active = false
 
 func finish_transition():
 	if transition_scene:
 		transition_scene = false
 		if current_scene == "underworld":
 			current_scene = "underworld_2"
-		else:
+		else: 
 			current_scene = "underworld"
 	

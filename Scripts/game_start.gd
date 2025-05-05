@@ -4,8 +4,6 @@ var pillar1_activated = false
 var pillar2_activated = false
 
 func _ready():
-	var resource = preload("res://game_start.dialogue")
-	DialogueManager.show_example_dialogue_balloon(resource, "Wake_up")
 	$Pillar.connect("pillar_activated", Callable(self, "_on_pillar1_activated"))
 	$Pillar2.connect("pillar_activated", Callable(self, "_on_pillar2_activated"))
 
@@ -19,9 +17,9 @@ func _on_pillar2_activated():
 
 func check_pillars():
 	if pillar1_activated and pillar2_activated:
+		Global.active = true
 		spawn_azrael()
 		spawn_floating_pillar()
-		spawn_portal()
 		spawn_enemies()
 
 func spawn_azrael():
@@ -37,14 +35,9 @@ func spawn_floating_pillar():
 	pillar2.position = Vector2(-679, 881)
 	add_child(pillar)
 	add_child(pillar2)
-func spawn_portal():
-	var portal = preload("res://Scenes/portal.tscn")
-	var portalx = portal.instantiate()
-	portalx.position = Vector2(1813,2)
-	add_child(portalx)
 func spawn_enemies():
 	## could do a loop but this makes it easier to spawn them in exact places and the loop was buggy
-		var enemy = preload("res://skelton_enemy.tscn")
+		var enemy = preload("res://skeleton_guard.tscn")
 		var enemy1 = enemy.instantiate()
 		var enemy2 = enemy.instantiate()
 		var enemy3 = enemy.instantiate()
